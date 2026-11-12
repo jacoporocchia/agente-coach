@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 · 2026-11-12
+
+Al primo avvio si fa sempre l'intake, e la presentazione si vede senza doverla chiedere.
+
+- `session-message.sh` al primo avvio mostra a schermo la presentazione completa (cosa è l'agente, su cosa aiuta, cosa non fa, la memoria) invece di una riga sola.
+- `/coach` al primo avvio non chiede più se fare l'intake o partire da un tema: parte con la prima domanda dell'intake. Un tema portato comunque viene annotato e ripreso a intake concluso. L'agente non ripete la presentazione già a schermo.
+- `session-start.sh` dice all'agente se l'intake è registrato in `coach.json`, così anche senza `/coach` la prima risposta parte dall'intake.
+- Ripreso il fix della 1.0.2, rimasto solo sulla copia installata e perso nella 1.1.0: l'hook non stampa più la memoria del cliente (superava la soglia di ~10 KB e l'agente vedeva solo un'anteprima) ma indica i file da leggere con Read.
+
 ## 1.1.0 · 2026-11-12
 
 Primo avvio pensato per chi non conosce Claude Code.

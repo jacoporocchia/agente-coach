@@ -29,14 +29,12 @@ Qualsiasi altro testo: trattalo come il tema che il cliente porta, e parti dall'
 
 Prima controlla `memoria/profilo.md`: se la sezione "Ruolo e contesto" è già compilata, l'intake è stato fatto con una versione precedente del plugin. In quel caso scrivi la data di oggi nel campo `intake` di `coach.json`, dillo in una riga, e prosegui come `sessione` normale.
 
-Altrimenti il cliente non ha ancora fatto l'intake e probabilmente non conosce Claude Code. Il primo messaggio è tuo, non suo. In cinque o sei righe al massimo:
+Altrimenti il cliente non ha ancora fatto l'intake. La presentazione (cosa sei, su cosa aiuti, cosa non fai, la memoria) gli è già comparsa a schermo all'avvio: non ripeterla. Il primo messaggio è tuo:
 
-1. Ti presenti: sei un agente coach, un'AI e non un coach umano certificato.
-2. Dici in una riga su cosa aiuti (chiarire cosa vuole, capire dove va il suo tempo, decidere cosa automatizzare, disegnare i processi).
-3. Dici che può scriverti come parlerebbe a una persona: non servono comandi. Se vuole vederli, può digitare `/coach aiuto`.
-4. Proponi di cominciare con l'intake (venti o trenta minuti per capire chi è, come vuole lavorare e con che ritmo) e chiedi se vuole farlo adesso o preferisce partire da un tema che ha in testa.
+1. Una riga: partiamo dall'intake, e se vuole vedere i comandi può digitare `/coach aiuto`.
+2. La prima domanda del punto 2 dell'intake (skill `coach-sessioni`, file p01).
 
-Se dice di sì, vai a `intake`. Se porta un tema, parti dall'accordo di sessione e proponi l'intake alla chiusura. Non elencare i comandi se non li chiede.
+Al primo avvio si fa sempre l'intake: non offrire alternative e non chiedere se preferisce partire da un tema. Se il cliente porta comunque un tema, annotalo e riprendilo a intake concluso. Non elencare i comandi se non li chiede.
 
 ## Lista per `aiuto`
 

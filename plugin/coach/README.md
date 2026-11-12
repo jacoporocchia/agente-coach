@@ -44,7 +44,7 @@ All'avvio l'hook vede `coach.json`, carica core e memoria nel contesto e mostra 
 Il cliente nuovo non deve conoscere i comandi. Tre cose lo guidano:
 
 - Il launcher creato dall'installer (`Avvia coach` sul Desktop, alias `coach` sul Mac) avvia Claude Code con `/coach` come primo messaggio, quindi parla per primo l'agente.
-- `/coach` senza argomenti, se `coach.json` ha il campo `intake` vuoto, non apre una sessione: l'agente si presenta in poche righe e propone l'intake. A intake concluso scrive la data nel campo `intake`. Un'istanza creata prima della 1.1.0 non ha il campo: se `profilo.md` è già compilato l'agente lo considera fatto e scrive la data.
+- `/coach` senza argomenti, se `coach.json` ha il campo `intake` vuoto, non apre una sessione: la presentazione compare a schermo all'avvio (hook `session-message.sh`) e l'agente parte direttamente con l'intake, senza alternative. A intake concluso scrive la data nel campo `intake`. Un'istanza creata prima della 1.1.0 non ha il campo: se `profilo.md` è già compilato l'agente lo considera fatto e scrive la data.
 - L'hook `session-message.sh` stampa un `systemMessage` di una riga che Claude Code mostra a schermo all'avvio, diverso prima e dopo l'intake.
 
 Dopo una modifica al plugin, sempre: aggiorna la versione in `plugin.json`, in `../.claude-plugin/marketplace.json`, in `CHANGELOG.md` e nel `LEGGIMI.md` del pacchetto; lancia i test; ricostruisci lo zip con `pacchetto/costruisci-pacchetto.sh`; poi `/plugin marketplace update coach-locale`.

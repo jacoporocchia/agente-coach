@@ -11,7 +11,8 @@ DIR="${CLAUDE_PROJECT_DIR:-$PWD}"
 INTAKE=$(tr -d '\r' < "$DIR/coach.json" | tr '\n' ' ' | grep -oE '"intake"[[:space:]]*:[[:space:]]*"[^"]*"' | grep -oE '"[^"]*"$' | tr -d '"')
 
 if [ -z "$INTAKE" ]; then
-  MSG="Agente coach pronto. È la prima volta: scrivi /coach e ti guido io, oppure racconta direttamente su cosa vuoi lavorare. Per vedere i comandi: /coach aiuto"
+  # \n dentro la stringa: printf lo lascia com'è e nel JSON diventa un a capo. Niente virgolette doppie nel testo.
+  MSG="Sono il tuo agente coach: un'AI, non un coach umano certificato.\\nTi aiuto a mettere in ordine quello che vuoi, capire cosa ti prende tempo senza valore, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi.\\nLavoro con domande e, quando me lo chiedi, con proposte. Non faccio terapia. Ricordo tra le sessioni solo ciò che scrivo in memoria/, che puoi leggere e correggere.\\n\\nÈ la prima volta: partiamo dall'intake (45-60 minuti, anche in due volte). Costruiamo l'accordo su come lavoriamo, una prima versione di profilo e goal, e chiudiamo con un primo impegno."
 else
   MSG="Agente coach pronto. Scrivi /coach per una sessione, /coach checkin per gli impegni aperti, o racconta direttamente il tema. Comandi: /coach aiuto"
 fi
