@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.1 · 2026-11-12
+
+Il core torna a contenere solo regole valide a ogni messaggio. Comportamento atteso invariato.
+
+- Core da 1.618 a circa 1.260 parole. Spostati nelle skill: "Lavoro a tempo" nel nuovo p07; le procedure di lezioni, valutazioni e funzioni opzionali in p06. Nel core restano i principi.
+- Due contraddizioni risolte. Evidenza: revisione del core dopo la 1.4.0. (1) "Passaggio sempre dichiarato" contro "in lavoro a tempo senza chiedere": ora basta dichiararlo una volta all'inizio della consegna. (2) "Funzioni a fine sessione" contro l'eccezione del percorso: ora "si propongono quando servono, mai si usano senza sì".
+- Test: tetto di 1.300 parole sul core, p07 obbligatorio, 38 file di metodo.
+- CONTRACT: ogni modifica al core cita la sua evidenza nel CHANGELOG.
+
 ## 1.4.0 · 2026-11-12
 
 I tempi del percorso.

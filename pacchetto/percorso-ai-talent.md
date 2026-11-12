@@ -23,7 +23,7 @@ Rimisura: circa 19 aprile 2027, sei settimane dopo l'ultima lezione. Si confront
 
 ## Indicazioni per il coach
 
-- Le consegne hanno un tempo stimato (colonna Tempo): lavora secondo "Lavoro a tempo" del core, con le versioni rapide degli strumenti, e chiudi sull'output prima che il tempo finisca.
+- Le consegne hanno un tempo stimato (colonna Tempo): lavora secondo p07 (skill coach-sessioni, "Lavoro a tempo"), con le versioni rapide degli strumenti, e chiudi sull'output prima che il tempo finisca.
 - Check-in: il momento giusto è il venerdì o la domenica prima della lezione, 10 minuti, per arrivare in aula con la consegna chiusa. Se il cliente apre il coach il lunedì dopo la lezione, il check-in riguarda la consegna appena assegnata: cosa farà, quando, in quale scatola di tempo.
 - Pausa natalizia: dal 23 dicembre al 6 gennaio la consegna della lezione 3 non è in ritardo.
 

@@ -33,7 +33,11 @@ if '## Copia da condividere' not in (ROOT / 'skills/coach-processi/m07-template-
 if '## Diario leggero' not in (ROOT / 'skills/coach-tempo/t03-metodi-raccolta.md').read_text(encoding='utf-8'): err('t03: manca il diario leggero')
 # 1.4.0: tempo nell'accordo e versioni rapide
 _core = (ROOT / 'core/core.md').read_text(encoding='utf-8')
-if '## Lavoro a tempo' not in _core or 'quanto tempo ha adesso' not in _core: err('core: manca il lavoro a tempo')
+if 'quanto tempo ha adesso' not in _core or 'p07' not in _core: err('core: manca il tempo nell accordo o il rimando a p07')
+if not (ROOT / 'skills/coach-sessioni/p07-lavoro-a-tempo.md').exists(): err('manca p07-lavoro-a-tempo.md')
+# tetto del core: ogni aggiunta obbliga a spostare o togliere qualcosa
+_parole = len(_core.split())
+if _parole > 1300: err(f'core di {_parole} parole: il tetto è 1300. Sposta le procedure nelle skill prima di aggiungere')
 for _f, _h in [('skills/coach-sessioni/p01-intake.md', '## Versione breve'), ('skills/coach-processi/m01-mappare-processo.md', '## Mappa rapida'), ('skills/coach-automazione/a02-valutare-candidato.md', '## Scheda rapida')]:
     if _h not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: manca {_h}')
 # il documento di processo nel pacchetto deve essere la versione anonimizzata
@@ -67,7 +71,7 @@ for d in skills:
         if not t.split('\n')[2].startswith('**Usalo quando:**'): err(f'{f.name}: manca la riga Usalo quando')
         for ref in re.findall(r'`((?:\.\./coach-[a-z]+/)?[a-z]\d\d-[a-z0-9-]+\.md)`', t):
             if not (d / ref).resolve().exists(): err(f'{f.name}: rimando rotto {ref}')
-if nfiles != 37: err(f'attesi 37 file di metodo, trovati {nfiles}')
+if nfiles != 38: err(f'attesi 38 file di metodo, trovati {nfiles}')
 
 # niente dati personali nel metodo
 for f in list((ROOT / 'skills').rglob('*.md')) + [ROOT / 'core/core.md', ROOT / 'commands/coach.md'] + list((ROOT / 'istanza-modello').rglob('*.md')):

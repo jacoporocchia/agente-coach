@@ -36,6 +36,8 @@ Se manca un file di memoria, lo dice e lavora con quello che ha. Se non trova un
 
 Livello 1, locale all'istanza. Le correzioni del cliente diventano lezioni di una riga in `memoria/lezioni.md`, scritte solo dopo la sua conferma e rilette a ogni avvio. Una correzione che torna due volte diventa una regola. L'agente non modifica mai il core o le skill: propone, e la modifica la fa il cliente con una nuova versione del plugin.
 
+Regole per chi mantiene il core: resta sotto le 1.300 parole (lo verifica il test) e contiene solo regole che valgono a ogni messaggio; le procedure vanno nelle skill. Ogni modifica al core cita nel CHANGELOG la sua evidenza: una lezione tornata due volte, un caso di prova fallito, o una contraddizione trovata in revisione. Si corregge una regola esistente prima di aggiungerne una nuova.
+
 ## Evals
 
 `memoria/evals.csv`, formato `data,task,outcome,note,by`. Outcome `ok`, `fix`, `fail`, giudicato dal cliente (`by: user`) o da chi mantiene il plugin (`by: builder`). Batteria di prova in `memoria/eval-casi.md`.
