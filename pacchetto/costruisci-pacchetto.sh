@@ -12,7 +12,7 @@ python3 "$PROJ/plugin/coach/tests/check_structure.py" || { echo "Test falliti: z
 
 STAGE="$(mktemp -d)/agente-coach"
 mkdir -p "$STAGE"
-cp "$HERE/installa-mac.command" "$HERE/installa-windows.cmd" "$HERE/installa-windows.ps1" "$HERE/LEGGIMI.md" "$STAGE/"
+cp "$HERE/installa-mac.command" "$HERE/installa-windows.cmd" "$HERE/installa-windows.ps1" "$HERE/LEGGIMI.md" "$HERE/percorso-ai-talent.md" "$STAGE/"
 chmod +x "$STAGE/installa-mac.command"
 # solo la versione anonimizzata del documento di processo: quella alla radice contiene riferimenti personali
 cp "$HERE/processo-agente-coach.docx" "$STAGE/"

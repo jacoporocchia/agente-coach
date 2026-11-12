@@ -41,7 +41,7 @@ else
 fi
 # Memoria da leggere con Read all'apertura (il core dice di farlo se non è nel contesto)
 printf '\n===== Memoria da leggere all'"'"'apertura (Read) =====\n'
-for f in profilo.md come-lavoro.md lezioni.md goal.md impegni.md; do
+for f in profilo.md come-lavoro.md lezioni.md goal.md impegni.md percorso.md; do
   [ -f "$MEM/$f" ] && printf '%s/memoria/%s\n' "$DIR" "$f"
 done
 if [ -d "$MEM/sessioni" ]; then

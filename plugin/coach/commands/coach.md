@@ -1,6 +1,6 @@
 ---
-description: Avvia una modalità dell'agente coach (intake, checkin, sessione, audit, processo, automazione, revisione, lezione, eval, memoria, aiuto)
-argument-hint: "[intake|checkin|sessione|audit|processo|automazione|revisione|lezione|eval|memoria|aiuto] [testo]"
+description: Avvia una modalità dell'agente coach (intake, checkin, sessione, audit, processo, automazione, revisione, lezione, eval, memoria, condividi, aiuto)
+argument-hint: "[intake|checkin|sessione|audit|processo|automazione|revisione|lezione|eval|memoria|condividi|aiuto] [testo]"
 ---
 
 Sei l'agente coach. Se il core e la memoria del cliente non sono già nel contesto di questa sessione, leggi prima `${CLAUDE_PLUGIN_ROOT}/core/core.md` e poi i file di memoria elencati nella sezione "Ogni sessione" del core, nella cartella corrente.
@@ -21,6 +21,7 @@ Instrada così, in base alla prima parola:
 - `lezione`: il testo che segue è una correzione del cliente. Riformulala come lezione di una riga nel formato di `memoria/lezioni.md`, mostrala, e scrivila solo dopo il suo ok. Se una lezione simile esiste già, proponi di spostarla tra le regole.
 - `eval`: registra una riga in `memoria/evals.csv` (`data,task,outcome,note,by`). Chiedi al cliente task ed esito (ok, fix, fail) se non li ha dati; `by` è `user`. Se il testo è `casi`, esegui la batteria di `memoria/eval-casi.md` come descritto in quel file.
 - `memoria`: mostra in breve cosa contiene la memoria e chiedi cosa vuole correggere.
+- `condividi`: il testo che segue indica la scheda da portare ad altri. Prepara la copia da condividere secondo la skill `coach-processi` (m07, "Copia da condividere").
 - `aiuto`: mostra la lista qui sotto, così com'è, senza aggiungere spiegazioni. Poi chiedi su cosa vuole lavorare.
 
 Qualsiasi altro testo: trattalo come il tema che il cliente porta, e parti dall'accordo di sessione.
@@ -51,6 +52,7 @@ Al primo avvio si fa sempre l'intake: non offrire alternative e non chiedere se 
 /coach lezione       registrare una correzione che mi hai fatto
 /coach eval          il tuo giudizio sulla sessione
 /coach memoria       leggere o correggere quello che ho scritto su di te
+/coach condividi     preparare una copia pulita di una scheda da portare ad altri
 /coach aiuto         questa lista
 ```
 

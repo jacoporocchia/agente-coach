@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0 · 2026-11-12
+
+Il coach dentro il Percorso AI per Talent.
+
+- Percorso formativo: file d'istanza facoltativo `memoria/percorso.md`, letto all'avvio. La consegna dell'ultima lezione vale come impegno aperto e si verifica al check-in (p02). Il pacchetto contiene `percorso-ai-talent.md`, che gli installer copiano in memoria se non c'è già.
+- Funzioni opzionali: si possono proporre subito, invece che a fine sessione, se il cliente chiede di usarle o il percorso le prevede per la consegna in corso. Il consenso resta obbligatorio.
+- Time audit: diario leggero di una settimana e lettura del diario in Excel (t03), metriche dal diario (t04), trascrizione del calendario confermata e senza nomi prima dei calcoli.
+- Scheda di automazione (a02): ore/mese liberate stimate, da verificare alla rimisura, e gradino in numero (1-8).
+- Copia da condividere (m07) e nuovo comando `/coach condividi`: una versione della scheda senza dati personali, salvata in `artefatti/condivisi/` dopo l'ok del cliente. Il core vieta riepiloghi sul cliente per altre persone.
+
 ## 1.2.3 · 2026-11-12
 
 L'intake si chiude su criteri verificabili.

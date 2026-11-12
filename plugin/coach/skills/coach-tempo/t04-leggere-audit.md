@@ -12,6 +12,8 @@
 - **Mappa dell'energia:** cosa carica, cosa scarica, in che fasce orarie.
 - **Scarto di percezione:** stima iniziale contro dato, sulle 2-3 attività principali.
 
+Da un diario a mezz'ore: tipo dalla colonna Tipo; quota sui goal = mezz'ore con Goal diverso da "nessuno"; mappa dell'energia dalla colonna Energia per fascia oraria; quota pianificata dalla colonna Pianificato.
+
 ## Domande di lettura (una per volta)
 
 - Cosa ti sorprende?

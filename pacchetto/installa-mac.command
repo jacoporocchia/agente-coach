@@ -59,6 +59,12 @@ else
   sed "s/\"cliente\": \"\"/\"cliente\": \"$NOME_ESC\"/; s/\"creata\": \"\"/\"creata\": \"$(date +%Y-%m-%d)\"/" "$INSTANZA/coach.json" > "$INSTANZA/coach.json.tmp" && mv "$INSTANZA/coach.json.tmp" "$INSTANZA/coach.json"
   echo "Creata la cartella \"il mio coach\" sulla Scrivania."
 fi
+# Il percorso formativo: copiato in memoria solo se non c'è già (le correzioni del cliente restano)
+if [ -f "$PKG/percorso-ai-talent.md" ] && [ ! -f "$INSTANZA/memoria/percorso.md" ]; then
+  mkdir -p "$INSTANZA/memoria"
+  cp "$PKG/percorso-ai-talent.md" "$INSTANZA/memoria/percorso.md"
+  echo "Aggiunto il calendario del percorso in memoria/percorso.md."
+fi
 
 # 4. Avvio con doppio clic dalla Scrivania
 cat > "$LAUNCHER" <<LAUNCH

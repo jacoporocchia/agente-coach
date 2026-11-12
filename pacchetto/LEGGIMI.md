@@ -1,4 +1,4 @@
-# Agente coach, versione 1.2.3 (fase di test)
+# Agente coach, versione 1.3.0 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 
@@ -34,6 +34,7 @@ Non servono comandi. Se vuoi vederli, scrivi `/coach aiuto`. I principali:
 /coach processo      mappare o ridisegnare un processo
 /coach automazione   valutare se automatizzare un'attività
 /coach memoria       leggere o correggere quello che ha scritto su di te
+/coach condividi     preparare una copia pulita di una scheda da portare in aula
 ```
 
 Per chiudere: scrivi `/exit` oppure chiudi la finestra. La memoria è già salvata.
@@ -52,5 +53,5 @@ Per scegliere il modello di Claude con cui parte il coach, lancia l'installer da
 
 ## Privacy
 
-La tua memoria resta solo nella cartella "il mio coach" sul tuo computer, in file di testo che puoi leggere e correggere. Il plugin non contiene dati di nessuno. Il coach non manda mail, non scrive sul calendario e non tocca sistemi condivisi senza un tuo ok esplicito per quella singola azione.
+La tua memoria resta solo nella cartella "il mio coach" sul tuo computer, in file di testo che puoi leggere e correggere. Il plugin non contiene dati di nessuno. Il coach conosce il calendario del percorso (in `memoria/percorso.md`) e al check-in ti chiede della consegna della settimana, ma non riferisce niente a nessuno: in aula porti solo quello che scegli, e se vuoi portare una scheda `/coach condividi` te ne prepara una copia senza dati personali. Il coach non manda mail, non scrive sul calendario e non tocca sistemi condivisi senza un tuo ok esplicito per quella singola azione.
 Dettagli in `plugin/coach/README.md`, regole in `plugin/coach/CONTRACT.md`.

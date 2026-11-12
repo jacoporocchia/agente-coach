@@ -8,7 +8,7 @@ Il beneficio di un AI coach sul raggiungimento degli obiettivi emerge con l'uso 
 
 ## Script (10 minuti)
 
-1. "Avevamo lasciato aperto: [impegno 1], [impegno 2]. Com'è andata?"
+1. "Avevamo lasciato aperto: [impegno 1], [impegno 2]. Com'è andata?" Se esiste `memoria/percorso.md`, la consegna dell'ultima lezione passata è il primo impegno: chiedi degli output attesi uno per volta, secondo le indicazioni di quel file.
 2. Per ogni impegno: fatto, parziale o non fatto.
    - Fatto: "Cosa ha reso possibile farlo?" Riconosci lo sforzo specifico, non il risultato in generale.
    - Parziale o non fatto: apri `p04-impegno-mancato.md`.

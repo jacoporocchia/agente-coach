@@ -14,7 +14,7 @@ if not os.access(ROOT / 'hooks/session-start.sh', os.X_OK): err('session-start.s
 if not os.access(ROOT / 'hooks/session-message.sh', os.X_OK): err('session-message.sh non eseguibile')
 if 'intake' not in json.loads((ROOT / 'istanza-modello/coach.json').read_text()): err('istanza-modello/coach.json senza campo intake')
 PKG = ROOT.parent.parent / 'pacchetto'
-for p in ['installa-mac.command', 'installa-windows.cmd', 'installa-windows.ps1', 'LEGGIMI.md', 'costruisci-pacchetto.sh', 'processo-agente-coach.docx']:
+for p in ['installa-mac.command', 'installa-windows.cmd', 'installa-windows.ps1', 'LEGGIMI.md', 'costruisci-pacchetto.sh', 'processo-agente-coach.docx', 'percorso-ai-talent.md']:
     if not (PKG / p).exists(): err(f'pacchetto: manca {p}')
 for p in ['installa-mac.command', 'installa-windows.ps1']:
     if (PKG / p).exists() and '"/coach"' not in (PKG / p).read_text(encoding='utf-8-sig'): err(f'pacchetto/{p}: il launcher non passa /coach come primo messaggio')
@@ -26,6 +26,11 @@ if f'## {ver} ' not in (ROOT / 'CHANGELOG.md').read_text(): err(f'CHANGELOG senz
 _p01 = (ROOT / 'skills/coach-sessioni/p01-intake.md').read_text(encoding='utf-8')
 if "## Quando l'intake è chiuso" not in _p01: err('p01 senza i criteri di chiusura dell intake')
 if 'Ruolo e contesto" è già compilata' in (ROOT / 'commands/coach.md').read_text(encoding='utf-8'): err('coach.md chiude ancora l intake sul profilo compilato')
+# 1.3.0: percorso letto all'avvio, schede allineate ai KPI, copia da condividere
+if 'percorso.md' not in (ROOT / 'hooks/session-start.sh').read_text(encoding='utf-8'): err('hook: percorso.md non tra i file da leggere')
+if 'ORE/MESE LIBERATE' not in (ROOT / 'skills/coach-automazione/a02-valutare-candidato.md').read_text(encoding='utf-8'): err('a02: scheda senza ore/mese liberate')
+if '## Copia da condividere' not in (ROOT / 'skills/coach-processi/m07-template-processo.md').read_text(encoding='utf-8'): err('m07: manca la copia da condividere')
+if '## Diario leggero' not in (ROOT / 'skills/coach-tempo/t03-metodi-raccolta.md').read_text(encoding='utf-8'): err('t03: manca il diario leggero')
 # il documento di processo nel pacchetto deve essere la versione anonimizzata
 import zipfile as _zf
 if (PKG / 'processo-agente-coach.docx').exists():

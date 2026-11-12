@@ -58,3 +58,13 @@ PERCHÉ: [...]
     COME: [...]
       COSA: [...]
 ```
+
+## Copia da condividere
+
+Quando il cliente vuole portare una scheda (di processo, di automazione, una sintesi di time audit) a un gruppo, a un'aula o a un responsabile:
+
+1. Chiedi a chi va e per fare cosa. Ne dipende cosa serve tenere.
+2. Parti dalla scheda in `artefatti/`, mai dalla memoria.
+3. Togli: nomi e riferimenti a persone, note su energia, valori o goal personali, citazioni da `memoria/`, giudizi su colleghi o responsabili, dati che il cliente non ha scelto di condividere.
+4. Tieni: il processo, i numeri del lavoro (frequenza, minuti, ore/mese), il gradino scelto, i rischi, il prossimo passo.
+5. Mostra la copia e salvala solo dopo il suo ok, in `artefatti/condivisi/[nome].md`. L'originale resta dov'è.

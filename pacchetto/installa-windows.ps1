@@ -72,6 +72,14 @@ if (Test-Path $CoachJson) {
   [IO.File]::WriteAllText($CoachJson, $testo, $Utf8NoBom)
   Write-Host 'Creata la cartella "il mio coach" sul Desktop.'
 }
+# Il percorso formativo: copiato in memoria solo se non c'e' gia' (le correzioni del cliente restano)
+$PercorsoSrc = Join-Path $Pkg 'percorso-ai-talent.md'
+$PercorsoDst = Join-Path $Instanza 'memoria\percorso.md'
+if ((Test-Path $PercorsoSrc) -and -not (Test-Path $PercorsoDst)) {
+  New-Item -ItemType Directory -Force -Path (Join-Path $Instanza 'memoria') | Out-Null
+  Copy-Item $PercorsoSrc $PercorsoDst
+  Write-Host 'Aggiunto il calendario del percorso in memoria\percorso.md.'
+}
 
 # 4. Collegamento "Avvia coach" sul Desktop
 $Shell = New-Object -ComObject WScript.Shell

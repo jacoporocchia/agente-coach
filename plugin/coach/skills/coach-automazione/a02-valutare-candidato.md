@@ -37,10 +37,11 @@ Correzioni: sottrarre la manutenzione; accorciare l'orizzonte se il processo cam
 ```
 ATTIVITÀ: [verbo + oggetto]
 ECRS: eliminabile? [..] accorpabile? [..] semplificabile? [..]
-VALORE: [n/mese] × [min] = [h/anno] · pareggio 5 anni: [h] · uso del tempo liberato: [..]
+VALORE: [n/mese] × [min] = [h/mese] · [h/anno] · pareggio 5 anni: [h] · uso del tempo liberato: [..]
+ORE/MESE LIBERATE (stima): [..] · da verificare alla rimisura
 FATTIBILITÀ (1-5): regole [ ] input strutturati [ ] stabilità [ ] poche eccezioni [ ]
 RISCHIO: costo errore basso/medio/alto · visibilità subito/tardi · dati personali sì/no
-SCELTA: [gradino della scala]
+SCELTA: gradino [1-8] · [nome del gradino, dalla scala in a01]
 CONTROLLO UMANO: nessuno / a campione / approvazione prima dell'azione
 CHI MANTIENE: [..]
 PROSSIMO PASSO: [..]
