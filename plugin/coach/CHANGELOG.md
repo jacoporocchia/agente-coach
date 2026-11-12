@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.2 · 2026-11-12
+
+- Percorso: il check-in settimanale resta anche nelle lezioni 5-11 (decisione del cliente). Per la consegna basta "fatta?", il tempo va su goal e impegni. Core invariato.
+
 ## 1.4.1 · 2026-11-12
 
 Il core torna a contenere solo regole valide a ogni messaggio. Comportamento atteso invariato.
