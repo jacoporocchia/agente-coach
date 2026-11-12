@@ -31,6 +31,11 @@ if 'percorso.md' not in (ROOT / 'hooks/session-start.sh').read_text(encoding='ut
 if 'ORE/MESE LIBERATE' not in (ROOT / 'skills/coach-automazione/a02-valutare-candidato.md').read_text(encoding='utf-8'): err('a02: scheda senza ore/mese liberate')
 if '## Copia da condividere' not in (ROOT / 'skills/coach-processi/m07-template-processo.md').read_text(encoding='utf-8'): err('m07: manca la copia da condividere')
 if '## Diario leggero' not in (ROOT / 'skills/coach-tempo/t03-metodi-raccolta.md').read_text(encoding='utf-8'): err('t03: manca il diario leggero')
+# 1.4.0: tempo nell'accordo e versioni rapide
+_core = (ROOT / 'core/core.md').read_text(encoding='utf-8')
+if '## Lavoro a tempo' not in _core or 'quanto tempo ha adesso' not in _core: err('core: manca il lavoro a tempo')
+for _f, _h in [('skills/coach-sessioni/p01-intake.md', '## Versione breve'), ('skills/coach-processi/m01-mappare-processo.md', '## Mappa rapida'), ('skills/coach-automazione/a02-valutare-candidato.md', '## Scheda rapida')]:
+    if _h not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: manca {_h}')
 # il documento di processo nel pacchetto deve essere la versione anonimizzata
 import zipfile as _zf
 if (PKG / 'processo-agente-coach.docx').exists():

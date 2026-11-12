@@ -29,6 +29,10 @@ Si sale dal basso e ci si ferma al primo gradino che risolve il problema.
 
 L'ultima va fatta. Per chi si diverte a costruire automazioni, il rischio è automatizzare perché è stimolante. È lo stesso filtro che il cliente usa per le idee (`../coach-chiarire/c02-filtro-idee.md`).
 
+## Più candidate in poco tempo
+
+Con tre candidate e 30 minuti: dieci minuti a candidata, sempre nello stesso ordine. "Cosa succede se smetti?", poi ECRS in quattro domande secche, poi l'esito in una riga (eliminata / semplificata / va avanti). Salva le tre righe in `artefatti/automazioni/candidate.md`. Le candidate che vanno avanti passano a `a02-valutare-candidato.md`, anche nella versione rapida.
+
 ## Poi
 
 Se si arriva ai gradini 5-7: `a02-valutare-candidato.md` per i criteri, `a03-tipo-di-soluzione.md` per la scelta tecnica. Se tocca persone, dati personali o fondi: `a04-rischi-dati-persone.md`.

@@ -1,4 +1,4 @@
-# Agente coach, versione 1.3.0 (fase di test)
+# Agente coach, versione 1.4.0 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 

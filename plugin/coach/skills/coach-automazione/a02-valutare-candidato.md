@@ -24,6 +24,18 @@
 **Sostenibilità**
 12. Chi mantiene il flusso quando qualcosa cambia? Se la risposta è "il cliente", l'automazione è un nuovo carico.
 
+## Scheda rapida (15 minuti)
+
+Quando il tempo è poco, bastano cinque domande, che coprono gli otto criteri che decidono il gradino:
+
+1. Frequenza e tempo per esecuzione (criteri 1-2): danno le ore/mese.
+2. Regole scrivibili o giudizio (criterio 4).
+3. Eccezioni e input strutturati (criteri 6-7).
+4. Costo dell'errore e dati personali (criteri 9 e 11).
+5. Chi mantiene (criterio 12).
+
+Con queste risposte scegli il gradino. La scheda si compila con gli stessi campi, lasciando vuoti FATTIBILITÀ e pareggio dove non ci sono dati, con la nota "rapida: da completare se si arriva ai gradini 5-7". Se tocca dati personali o decisioni su persone, apri comunque `a04-rischi-dati-persone.md`.
+
 ## Il conto del pareggio (orizzonte 5 anni)
 
 Tempo investibile senza andare in perdita = 5 × occorrenze all'anno × tempo risparmiato per occorrenza.

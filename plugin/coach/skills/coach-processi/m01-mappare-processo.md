@@ -44,3 +44,14 @@
 ## Output
 
 Scheda in `artefatti/processi/[nome].md` con `m07-template-processo.md`.
+
+## Mappa rapida (30 minuti)
+
+Quando il tempo è poco, quattro movimenti invece di sei:
+
+1. **Risultato e decisione** (5'): "Cosa produce, per chi, e cosa vuoi decidere alla fine?"
+2. **Confini** (5'): dove inizia, dove finisce, quante volte al mese.
+3. **Passaggi** (15'): da un caso reale e recente, 5-10 passaggi come verbo più oggetto, con chi li fa. Segna solo i punti di decisione e le attese evidenti, senza misurare.
+4. **Lettura** (5'): "Quale passaggio elimineresti, quale è candidato all'automazione?" Se ce n'è uno: `../coach-automazione/a01-prima-di-automatizzare.md`.
+
+Output: la scheda di `m07-template-processo.md` con i soli campi PROCESSO, RISULTATO, INIZIA/FINISCE, FREQUENZA, PASSAGGI (senza tempi). Il resto si completa in un'altra sessione, se serve.

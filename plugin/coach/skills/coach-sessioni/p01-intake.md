@@ -49,3 +49,14 @@ Se la sessione finisce prima, non scrivere la data. Nella scheda della sessione 
 ## Da evitare
 
 Fare l'intake come un modulo da compilare. Spingere verso goal "giusti" invece che suoi. Chiudere senza un primo impegno concreto.
+
+## Versione breve (30 minuti, dentro un percorso)
+
+Quando il cliente segue un percorso (`memoria/percorso.md`) o ha poco tempo:
+
+- Punto 1 in due righe. Punto 2: solo ritmo e quanto spingere. Punto 3: ruolo e progetti, tre domande al massimo.
+- Punto 4: due goal a 12 mesi, ciascuno con un segnale per capire se è raggiunto. Niente terzo goal.
+- Punto 5: il goal a 4-6 settimane per il più importante. Il primo impegno può essere la consegna della lezione, se il cliente la riconosce come sua.
+- `come-lavoro.md`: tre righe (come vuole essere sfidato, un rischio ricorrente, cosa non vuole). Si arricchisce nelle sessioni successive.
+
+I criteri di chiusura restano gli stessi cinque, in forma minima.

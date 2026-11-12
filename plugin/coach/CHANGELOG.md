@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.0 · 2026-11-12
+
+I tempi del percorso.
+
+- Core: l'accordo di sessione chiede quanto tempo c'è; a due terzi del tempo si passa alla chiusura. Nuova sezione "Lavoro a tempo" per le consegne con tempo stimato: versioni rapide, bozze proposte invece che costruite solo con domande, chiusura sull'output.
+- Versioni rapide: intake breve da 30 minuti (p01), mappa rapida da 30 minuti in quattro movimenti (m01), tre candidate in 30 minuti con la regola zero (a01), scheda rapida da 15 minuti (a02).
+- `percorso-ai-talent.md`: tempo stimato di ogni consegna, check-in il venerdì o la domenica prima della lezione, pausa natalizia.
+
 ## 1.3.0 · 2026-11-12
 
 Il coach dentro il Percorso AI per Talent.
