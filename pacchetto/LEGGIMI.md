@@ -1,4 +1,4 @@
-# Agente coach, versione 1.2.0 (fase di test)
+# Agente coach, versione 1.2.1 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 
@@ -23,7 +23,7 @@ Non si installa niente dentro Claude Code: il plugin viene caricato solo quando 
 
 ## Come si usa
 
-Doppio clic su "Avvia coach". Si apre una finestra di testo e il coach parla per primo: si presenta e ti propone un primo incontro di conoscenza (l'intake, venti o trenta minuti). Da lì in poi gli scrivi come scriveresti a una persona: racconti su cosa vuoi lavorare, lui fa domande, alla fine prendete un impegno e lui aggiorna la sua memoria mostrandoti cosa ha scritto.
+Doppio clic su "Avvia coach". Si apre una finestra di testo e compare la presentazione del coach e lui parte subito con il primo incontro di conoscenza (l'intake, 45-60 minuti, anche in due volte). Da lì in poi gli scrivi come scriveresti a una persona: racconti su cosa vuoi lavorare, lui fa domande, alla fine prendete un impegno e lui aggiorna la sua memoria mostrandoti cosa ha scritto.
 
 Non servono comandi. Se vuoi vederli, scrivi `/coach aiuto`. I principali:
 
@@ -47,6 +47,8 @@ Per chiudere: scrivi `/exit` oppure chiudi la finestra. La memoria è già salva
 ## Aggiornamenti
 
 Quando arriva una versione nuova, rilancia l'installer del nuovo zip. Sostituisce il plugin e lascia com'è la cartella "il mio coach", memoria compresa.
+
+Per scegliere il modello di Claude con cui parte il coach, lancia l'installer dal Terminale con la variabile `COACH_MODEL`, per esempio `COACH_MODEL=claude-opus-5-5 bash installa-mac.command` (su Windows: `set COACH_MODEL=claude-opus-5-5` e poi `installa-windows.cmd` dalla stessa finestra). Gli aggiornamenti successivi mantengono il modello scelto. Senza la variabile, il coach usa il modello di default di Claude Code.
 
 ## Privacy
 

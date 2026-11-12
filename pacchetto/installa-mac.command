@@ -26,6 +26,19 @@ if ! command -v claude >/dev/null 2>&1 && [ ! -x "$HOME/.local/bin/claude" ]; th
 fi
 CLAUDE_BIN="$(command -v claude || echo "$HOME/.local/bin/claude")"
 
+# Modello (facoltativo): COACH_MODEL=<id> prima del comando, oppure quello già nel launcher di un'installazione precedente.
+# Senza nessuno dei due, Claude Code usa il suo modello di default.
+MODELLO="${COACH_MODEL:-}"
+if [ -z "$MODELLO" ] && [ -f "$LAUNCHER" ]; then
+  MODELLO=$(grep -oE -- '--model [A-Za-z0-9._-]+' "$LAUNCHER" | head -1 | cut -d' ' -f2)
+fi
+if [ -n "$MODELLO" ] && ! printf '%s' "$MODELLO" | grep -qE '^[A-Za-z0-9._-]+$'; then
+  echo "COACH_MODEL non valido: $MODELLO (ammessi lettere, numeri, punto, trattino, underscore)."
+  read -r -p "Premi Invio per chiudere." _; exit 1
+fi
+MODEL_FLAG=""
+[ -n "$MODELLO" ] && MODEL_FLAG="--model $MODELLO " && echo "Modello: $MODELLO"
+
 # 2. Plugin: copiato (o aggiornato) in ~/.agente-coach/plugin
 case "$PKG/" in "$PLUGIN_DEST/"*) echo "Scompatta lo zip in un'altra cartella (per esempio Download) e rilancia."; read -r -p "Premi Invio per chiudere." _; exit 1;; esac
 rm -rf "$PLUGIN_DEST"
@@ -51,7 +64,7 @@ fi
 cat > "$LAUNCHER" <<LAUNCH
 #!/bin/bash
 cd "$INSTANZA"
-exec "$CLAUDE_BIN" --plugin-dir "$PLUGIN_DEST/coach" "/coach"
+exec "$CLAUDE_BIN" ${MODEL_FLAG}--plugin-dir "$PLUGIN_DEST/coach" "/coach"
 LAUNCH
 chmod +x "$LAUNCHER"
 
@@ -60,7 +73,7 @@ RC="$HOME/.zshrc"
 touch "$RC"
 sed -i '' '/^# agente coach$/d; /^alias coach=/d' "$RC" 2>/dev/null || true
 if ! grep -q "alias coach=" "$RC"; then
-  printf '\n# agente coach\nalias coach='"'"'cd "%s" && claude --plugin-dir "%s/coach" "/coach"'"'"'\n' "$INSTANZA" "$PLUGIN_DEST" >> "$RC"
+  printf '\n# agente coach\nalias coach='"'"'cd "%s" && claude %s--plugin-dir "%s/coach" "/coach"'"'"'\n' "$INSTANZA" "$MODEL_FLAG" "$PLUGIN_DEST" >> "$RC"
 fi
 
 echo ""
@@ -71,5 +84,5 @@ echo "All'avvio parla per primo il coach: ti guida lui. Per vedere i comandi: /c
 echo ""
 read -r -p "Vuoi avviarlo adesso? (s/n) " SUBITO
 if [ "$SUBITO" = "s" ] || [ "$SUBITO" = "S" ]; then
-  cd "$INSTANZA" && exec "$CLAUDE_BIN" --plugin-dir "$PLUGIN_DEST/coach" "/coach"
+  cd "$INSTANZA" && exec "$CLAUDE_BIN" ${MODEL_FLAG}--plugin-dir "$PLUGIN_DEST/coach" "/coach"
 fi

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1 · 2026-11-12
+
+- Gli installer (Mac e Windows) accettano il modello con la variabile `COACH_MODEL` e lo scrivono nel launcher, nel collegamento e nell'alias `coach`. Rilanciati senza variabile, mantengono il modello già presente nel launcher dell'installazione precedente. Il valore è controllato: solo lettere, numeri, punto, trattino, underscore.
+- LEGGIMI del pacchetto: durata dell'intake allineata a p01 (45-60 minuti) e istruzioni per scegliere il modello.
+
 ## 1.2.0 · 2026-11-12
 
 Al primo avvio si fa sempre l'intake, e la presentazione si vede senza doverla chiedere.

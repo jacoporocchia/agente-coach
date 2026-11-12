@@ -39,6 +39,18 @@ if (-not $GitBash -and -not (Get-Command bash -ErrorAction SilentlyContinue)) {
   Write-Host 'Attenzione: non trovo Git Bash. Senza, l''agente non carica la memoria all''avvio: dovrai scrivere /coach a inizio sessione. Puoi installarlo da https://git-scm.com/download/win' -ForegroundColor Yellow
 }
 
+# Modello (facoltativo): variabile COACH_MODEL, oppure quello già nel collegamento di un'installazione precedente.
+# Senza nessuno dei due, Claude Code usa il suo modello di default.
+$LinkPath = Join-Path $Desktop 'Avvia coach.lnk'
+$Modello = $env:COACH_MODEL
+if (-not $Modello -and (Test-Path $LinkPath)) {
+  $vecchio = (New-Object -ComObject WScript.Shell).CreateShortcut($LinkPath).Arguments
+  if ($vecchio -match '--model ([A-Za-z0-9._-]+)') { $Modello = $Matches[1] }
+}
+if ($Modello -and $Modello -notmatch '^[A-Za-z0-9._-]+$') { Stop-Installer "COACH_MODEL non valido: $Modello" }
+$ModelArgs = @()
+if ($Modello) { $ModelArgs = @('--model', $Modello); Write-Host "Modello: $Modello" }
+
 # 2. Plugin: copiato (o aggiornato) in %USERPROFILE%\.agente-coach\plugin
 if (Test-Path $PluginDest) { Remove-Item -Recurse -Force $PluginDest }
 New-Item -ItemType Directory -Force -Path $PluginDest | Out-Null
@@ -63,9 +75,9 @@ if (Test-Path $CoachJson) {
 
 # 4. Collegamento "Avvia coach" sul Desktop
 $Shell = New-Object -ComObject WScript.Shell
-$Link  = $Shell.CreateShortcut((Join-Path $Desktop 'Avvia coach.lnk'))
+$Link  = $Shell.CreateShortcut($LinkPath)
 $Link.TargetPath       = $ClaudeBin
-$Link.Arguments        = '--plugin-dir "' + (Join-Path $PluginDest 'coach') + '" "/coach"'
+$Link.Arguments        = (($ModelArgs -join ' ') + ' --plugin-dir "' + (Join-Path $PluginDest 'coach') + '" "/coach"').Trim()
 $Link.WorkingDirectory = $Instanza
 $Link.Description      = 'Agente coach'
 $Link.Save()
@@ -77,5 +89,5 @@ Write-Host ''
 $Subito = Read-Host 'Vuoi avviarlo adesso? (s/n)'
 if ($Subito -match '^[sS]') {
   Set-Location $Instanza
-  & $ClaudeBin --plugin-dir (Join-Path $PluginDest 'coach') "/coach"
+  & $ClaudeBin @ModelArgs --plugin-dir (Join-Path $PluginDest 'coach') "/coach"
 }
