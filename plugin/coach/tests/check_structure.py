@@ -14,7 +14,7 @@ if not os.access(ROOT / 'hooks/session-start.sh', os.X_OK): err('session-start.s
 if not os.access(ROOT / 'hooks/session-message.sh', os.X_OK): err('session-message.sh non eseguibile')
 if 'intake' not in json.loads((ROOT / 'istanza-modello/coach.json').read_text()): err('istanza-modello/coach.json senza campo intake')
 PKG = ROOT.parent.parent / 'pacchetto'
-for p in ['installa-mac.command', 'installa-windows.cmd', 'installa-windows.ps1', 'LEGGIMI.md', 'costruisci-pacchetto.sh']:
+for p in ['installa-mac.command', 'installa-windows.cmd', 'installa-windows.ps1', 'LEGGIMI.md', 'costruisci-pacchetto.sh', 'processo-agente-coach.docx']:
     if not (PKG / p).exists(): err(f'pacchetto: manca {p}')
 for p in ['installa-mac.command', 'installa-windows.ps1']:
     if (PKG / p).exists() and '"/coach"' not in (PKG / p).read_text(encoding='utf-8-sig'): err(f'pacchetto/{p}: il launcher non passa /coach come primo messaggio')
@@ -22,6 +22,11 @@ ver = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())['version']
 mk = json.loads((ROOT / '../.claude-plugin/marketplace.json').read_text())['plugins'][0]['version']
 if ver != mk: err(f'versione plugin.json ({ver}) diversa da marketplace.json ({mk})')
 if f'## {ver} ' not in (ROOT / 'CHANGELOG.md').read_text(): err(f'CHANGELOG senza la versione {ver}')
+# il documento di processo nel pacchetto deve essere la versione anonimizzata
+import zipfile as _zf
+if (PKG / 'processo-agente-coach.docx').exists():
+    _x = _zf.ZipFile(PKG / 'processo-agente-coach.docx').read('word/document.xml').decode('utf-8')
+    if 'Nota su questa copia' not in _x or 'Mac di Max' in _x: err('pacchetto/processo-agente-coach.docx non è la versione anonimizzata')
 if (PKG / 'LEGGIMI.md').exists() and f'versione {ver}' not in (PKG / 'LEGGIMI.md').read_text(): err(f'pacchetto/LEGGIMI.md non cita la versione {ver}')
 
 # core

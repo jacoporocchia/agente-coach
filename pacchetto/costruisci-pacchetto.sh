@@ -14,7 +14,8 @@ STAGE="$(mktemp -d)/agente-coach"
 mkdir -p "$STAGE"
 cp "$HERE/installa-mac.command" "$HERE/installa-windows.cmd" "$HERE/installa-windows.ps1" "$HERE/LEGGIMI.md" "$STAGE/"
 chmod +x "$STAGE/installa-mac.command"
-[ -f "$PROJ/processo-agente-coach.docx" ] && cp "$PROJ/processo-agente-coach.docx" "$STAGE/"
+# solo la versione anonimizzata del documento di processo: quella alla radice contiene riferimenti personali
+cp "$HERE/processo-agente-coach.docx" "$STAGE/"
 mkdir -p "$STAGE/plugin"
 # il plugin senza file di sistema; le skill con tutti i loro file di metodo
 rsync -a --exclude '.DS_Store' --exclude '__pycache__' "$PROJ/plugin/" "$STAGE/plugin/"

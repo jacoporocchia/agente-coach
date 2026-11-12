@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2 · 2026-11-12
+
+- `session-start.sh` torna a indicare `impegni.md` tra i file da leggere: dalla 1.2.0 mancava, e l'agente rischiava di non partire dal check-in con impegni scaduti.
+- Core, "Apertura": allineato all'hook (l'elenco dei file arriva all'avvio, la memoria si legge con Read).
+- Pacchetto: lo zip include la versione anonimizzata del documento di processo (`pacchetto/processo-agente-coach.docx`). Dalla 1.1.0 lo script prendeva quella alla radice, con riferimenti personali. Il test lo verifica.
+
 ## 1.2.1 · 2026-11-12
 
 - Gli installer (Mac e Windows) accettano il modello con la variabile `COACH_MODEL` e lo scrivono nel launcher, nel collegamento e nell'alias `coach`. Rilanciati senza variabile, mantengono il modello già presente nel launcher dell'installazione precedente. Il valore è controllato: solo lettere, numeri, punto, trattino, underscore.

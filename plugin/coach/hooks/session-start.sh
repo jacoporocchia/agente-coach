@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # SessionStart del plugin coach.
 # Si attiva solo se la cartella di lavoro è un'istanza del coach (contiene coach.json).
-# Stampa su stdout il core, gli impegni aperti e le funzioni da proporre: Claude Code lo aggiunge al contesto.
+# Stampa su stdout il core, le funzioni da proporre e l'elenco dei file di memoria da leggere: Claude Code lo aggiunge al contesto.
 # Lo stdout sopra ~10 KB viene salvato su file da Claude Code e l'agente vede solo un'anteprima:
 # per questo la memoria del cliente non viene stampata qui, ma indicata da leggere all'apertura.
 
@@ -41,7 +41,7 @@ else
 fi
 # Memoria da leggere con Read all'apertura (il core dice di farlo se non è nel contesto)
 printf '\n===== Memoria da leggere all'"'"'apertura (Read) =====\n'
-for f in profilo.md come-lavoro.md lezioni.md goal.md; do
+for f in profilo.md come-lavoro.md lezioni.md goal.md impegni.md; do
   [ -f "$MEM/$f" ] && printf '%s/memoria/%s\n' "$DIR" "$f"
 done
 if [ -d "$MEM/sessioni" ]; then
