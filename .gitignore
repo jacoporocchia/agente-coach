@@ -1,0 +1,11 @@
+# dati personali dell'istanza v0 nella radice: non vanno nel repo del metodo
+memoria/
+artefatti/
+/coach.json
+# output della build
+*.zip
+/agente-coach/
+# file di sistema e temporanei di Office
+.DS_Store
+~$*
+__pycache__/

@@ -1,0 +1,11 @@
+{
+  "contratto": "1.0.0",
+  "cliente": "",
+  "creata": "",
+  "intake": "",
+  "funzioni": {
+    "calendario": {"descrizione": "Legge gli eventi del calendario (solo titolo, orario, durata, numero di partecipanti) per il time audit. Non scrive niente.", "stato": "da-proporre"},
+    "campionamento-tempo": {"descrizione": "Un flusso n8n manda 5-8 notifiche al giorno per una o due settimane e chiede cosa si sta facendo; le risposte finiscono in artefatti/time-audit/.", "stato": "da-proporre"},
+    "posta": {"descrizione": "Legge i metadati della casella (mittente, orario, volume, mai il contenuto) per stimare il tempo di coordinamento.", "stato": "da-proporre"}
+  }
+}
