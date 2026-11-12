@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.3 · 2026-11-12
+
+L'intake si chiude su criteri verificabili.
+
+- p01: nuova sezione "Quando l'intake è chiuso" con cinque criteri (ritmo, profilo confermato, come-lavoro confermato, goal a 12 mesi e a 4-6 settimane con indicatore, primo impegno con data). La data in `coach.json` si scrive solo quando ci sono tutti.
+- Intake interrotto: la scheda di sessione annota "Intake in corso" e i criteri mancanti; la sessione dopo riparte dal primo mancante.
+- Tolta la regola che considerava chiuso l'intake se `profilo.md` aveva "Ruolo e contesto" compilato: chiudeva gli intake spezzati a metà.
+- p01: `come-lavoro.md` tra gli output dell'intake.
+
 ## 1.2.2 · 2026-11-12
 
 - `session-start.sh` torna a indicare `impegni.md` tra i file da leggere: dalla 1.2.0 mancava, e l'agente rischiava di non partire dal check-in con impegni scaduti.

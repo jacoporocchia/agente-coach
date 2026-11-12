@@ -25,7 +25,7 @@ printf 'Il testo qui sotto è il core del metodo. La memoria del cliente va lett
 # intake fatto se coach.json ha "intake": "AAAA-MM-GG" (campo mancante o vuoto = non fatto)
 INTAKE=$(tr -d '\r' < "$DIR/coach.json" | tr '\n' ' ' | grep -oE '"intake"[[:space:]]*:[[:space:]]*"[^"]*"' | grep -oE '"[^"]*"$' | tr -d '"')
 if [ -z "$INTAKE" ]; then
-  printf 'INTAKE NON REGISTRATO. Il cliente ha già visto a schermo la presentazione. Alla prima risposta segui "Primo avvio" del comando /coach: se profilo.md è compilato registra la data, altrimenti parti SEMPRE dall intake (skill coach-sessioni, p01), senza offrire alternative.\n'
+  printf 'INTAKE NON REGISTRATO. Il cliente ha già visto a schermo la presentazione. Alla prima risposta segui "Primo avvio" del comando /coach: parti SEMPRE dall intake (skill coach-sessioni, p01), o riprendilo dal primo criterio mancante se l ultima scheda dice "Intake in corso". Un profilo compilato non vuol dire intake chiuso.\n'
 else
   printf 'Prima risposta: o riprendi il primo impegno con data passata (skill coach-sessioni, p02) o chiedi su cosa vuole lavorare. Non partire in silenzio.\n'
 fi

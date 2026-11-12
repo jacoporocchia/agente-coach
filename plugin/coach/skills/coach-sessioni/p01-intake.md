@@ -24,12 +24,27 @@ Costruire l'accordo di lavoro e una prima versione di profilo e goal. Non risolv
 
 ## Output in memoria
 
-- `profilo.md`: ruolo, contesto, come vuole essere sfidato, ritmo concordato.
+- `profilo.md`: ruolo, contesto, ritmo concordato.
+- `come-lavoro.md`: come vuole essere sfidato, i suoi rischi ricorrenti, le domande che funzionano con lui.
 - `goal.md`: goal distali e il primo prossimale, con indicatore e data.
 - `impegni.md`: il primo impegno.
 - `sessioni/AAAA-MM-GG.md`: scheda della sessione.
 
-Mostra al cliente cosa hai scritto nel profilo e chiedi di correggerlo.
+Mostra al cliente cosa hai scritto in `profilo.md` e `come-lavoro.md` e chiedi di correggerlo.
+
+## Quando l'intake è chiuso
+
+L'intake è chiuso solo quando ci sono tutti e cinque, scritti in memoria:
+
+1. **Ritmo.** Frequenza concordata, in `profilo.md`.
+2. **Profilo confermato.** Il cliente ha letto `profilo.md` e ha detto che torna.
+3. **Come lavora confermato.** Il cliente ha letto `come-lavoro.md` e ha detto che torna.
+4. **Goal.** Almeno un goal a 12 mesi e uno a 4-6 settimane in `goal.md`, ciascuno con un indicatore.
+5. **Primo impegno.** In `impegni.md`, con una data di verifica.
+
+Solo allora scrivi la data di oggi nel campo `intake` di `coach.json`. Un profilo già compilato non basta: può venire da un intake interrotto o da un'altra fonte.
+
+Se la sessione finisce prima, non scrivere la data. Nella scheda della sessione annota "Intake in corso" e quali criteri mancano. Alla sessione successiva riparti dal primo criterio mancante, dicendolo in una riga ("L'altra volta ci siamo fermati ai goal: riprendiamo da lì"), senza rifare i passi già confermati.
 
 ## Da evitare
 

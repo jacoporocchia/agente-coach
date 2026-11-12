@@ -11,7 +11,7 @@ Argomenti: $ARGUMENTS
 
 Instrada così, in base alla prima parola:
 
-- `intake`: skill `coach-sessioni`, file p01. Quando l'intake è concluso e la memoria è aggiornata, scrivi la data di oggi nel campo `intake` di `coach.json` (formato AAAA-MM-GG). È l'unico campo di `coach.json` che tocchi oltre agli stati delle funzioni opzionali.
+- `intake`: skill `coach-sessioni`, file p01. Scrivi la data di oggi nel campo `intake` di `coach.json` (formato AAAA-MM-GG) solo quando sono soddisfatti tutti i criteri di "Quando l'intake è chiuso" in p01. È l'unico campo di `coach.json` che tocchi oltre agli stati delle funzioni opzionali.
 - `checkin`: skill `coach-sessioni`, file p02.
 - `sessione` o nessun argomento: se il campo `intake` di `coach.json` manca o è vuoto, segui "Primo avvio" qui sotto. Altrimenti skill `coach-sessioni`, file p03, dopo l'apertura descritta nel core.
 - `audit`: skill `coach-tempo`, file t01.
@@ -27,9 +27,11 @@ Qualsiasi altro testo: trattalo come il tema che il cliente porta, e parti dall'
 
 ## Primo avvio
 
-Prima controlla `memoria/profilo.md`: se la sezione "Ruolo e contesto" è già compilata, l'intake è stato fatto con una versione precedente del plugin. In quel caso scrivi la data di oggi nel campo `intake` di `coach.json`, dillo in una riga, e prosegui come `sessione` normale.
+Il campo `intake` vuoto vuol dire che l'intake non è chiuso. Un profilo già compilato non cambia le cose.
 
-Altrimenti il cliente non ha ancora fatto l'intake. La presentazione (cosa sei, su cosa aiuti, cosa non fai, la memoria) gli è già comparsa a schermo all'avvio: non ripeterla. Il primo messaggio è tuo:
+Prima guarda l'ultima scheda in `memoria/sessioni/`: se dice "Intake in corso", riprendi dal primo criterio mancante, come descritto in p01, e salta i punti 1 e 2 qui sotto.
+
+Altrimenti il cliente non ha ancora iniziato l'intake. La presentazione (cosa sei, su cosa aiuti, cosa non fai, la memoria) gli è già comparsa a schermo all'avvio: non ripeterla. Il primo messaggio è tuo:
 
 1. Una riga: partiamo dall'intake, e se vuole vedere i comandi può digitare `/coach aiuto`.
 2. La prima domanda del punto 2 dell'intake (skill `coach-sessioni`, file p01).

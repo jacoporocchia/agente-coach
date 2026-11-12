@@ -22,6 +22,10 @@ ver = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())['version']
 mk = json.loads((ROOT / '../.claude-plugin/marketplace.json').read_text())['plugins'][0]['version']
 if ver != mk: err(f'versione plugin.json ({ver}) diversa da marketplace.json ({mk})')
 if f'## {ver} ' not in (ROOT / 'CHANGELOG.md').read_text(): err(f'CHANGELOG senza la versione {ver}')
+# l'intake si chiude solo sui criteri di p01, mai sul solo profilo compilato
+_p01 = (ROOT / 'skills/coach-sessioni/p01-intake.md').read_text(encoding='utf-8')
+if "## Quando l'intake è chiuso" not in _p01: err('p01 senza i criteri di chiusura dell intake')
+if 'Ruolo e contesto" è già compilata' in (ROOT / 'commands/coach.md').read_text(encoding='utf-8'): err('coach.md chiude ancora l intake sul profilo compilato')
 # il documento di processo nel pacchetto deve essere la versione anonimizzata
 import zipfile as _zf
 if (PKG / 'processo-agente-coach.docx').exists():
