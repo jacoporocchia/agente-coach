@@ -35,4 +35,4 @@ Con tre candidate e 30 minuti: dieci minuti a candidata, sempre nello stesso ord
 
 ## Poi
 
-Se si arriva ai gradini 5-7: `a02-valutare-candidato.md` per i criteri, `a03-tipo-di-soluzione.md` per la scelta tecnica. Se tocca persone, dati personali o fondi: `a04-rischi-dati-persone.md`.
+Se si arriva ai gradini 5-7: `a02-valutare-candidato.md` per i criteri, `a03-tipo-di-soluzione.md` per la scelta tecnica. Con la scheda confermata, se va costruito: `../coach-requisiti/r01-filtro.md`. Se tocca persone, dati personali o fondi: `a04-rischi-dati-persone.md`.

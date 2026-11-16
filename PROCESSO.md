@@ -62,6 +62,14 @@ Max ha condiviso il contratto di un altro agente come modello. Ne abbiamo preso 
 
 Verifiche: il test di struttura (`plugin/coach/tests/check_structure.py`) passa; il validatore di Claude Code accetta plugin e marketplace; una sessione di prova in una copia dell'istanza vede le otto skill, conosce le regole e propone le funzioni come previsto.
 
+### Fase 7. Output standard (16 novembre 2026)
+
+Prima del test, Max ha chiesto output standard: schede e requisitazione. Le schede esistevano già (processo in m07, automazione in a02, sintesi del time audit in t04) ma con formati diversi; la requisitazione mancava. Max ha confermato tre scelte: requisitazione scritta per due lettori insieme (una persona e un modello che costruiscono), Markdown come fonte e Word solo come export della copia da condividere, e per il test priorità a requisitazione, scheda automazione e scheda processo.
+
+- **Intestazione comune** (m07) per tutti gli artefatti: tipo, titolo, stato, versione, date, collegamenti. Lo stesso nome di file lega processo, automazione e requisiti della stessa attività.
+- **Nuovo goal (stessa mattina).** Max ha ridefinito il punto d'arrivo: "generare la requisitazione sufficiente da passare a degli agenti per realizzare ciò che voglio". La requisitazione diventa l'output finale e le altre schede la alimentano. Nuova skill `coach-requisiti`: filtro obbligatorio su eliminare e semplificare (r01, approvato da Max), requisitazione in sezioni 0-13 con brief per gli agenti (r02), consegna e verifica dei criteri di accettazione (r03). Comando `/coach requisiti`. Il core cambia solo in "Chi sei": il coach scrive, non costruisce.
+- Versione 1.5.0 (minor: "Cosa non fai mai" invariato).
+
 ## Prossimi passi
 
 1. Max installa il plugin in Claude Code (istruzioni in `plugin/coach/README.md`) e rilegge `memoria/come-lavoro.md`, che è la prima versione delle sue preferenze.
@@ -85,3 +93,8 @@ Verifiche: il test di struttura (`plugin/coach/tests/check_structure.py`) passa;
 | 2026-11-10 | L'agente diventa un plugin di Claude Code | Le skill fanno nativamente il richiamo al bisogno; l'hook rende la lettura della memoria indipendente dal modello |
 | 2026-11-10 | "Il cliente" come termine generico | Lessico ICF, e mantiene corretta la grammatica dei testi |
 | 2026-11-10 | Prima versione di `come-lavoro.md` ripresa dal core v0 | Il comportamento con Max non cambia; Max la conferma all'intake |
+| 2026-11-16 | Intestazione comune per tutti gli artefatti | Schede confrontabili e leggibili anche dagli strumenti, con uno stato che dice a che punto sono |
+| 2026-11-16 | La requisitazione per agenti è l'output finale del coach | È il goal reale di Max; le schede diventano passi verso di essa |
+| 2026-11-16 | Filtro obbligatorio su eliminare e semplificare prima di ogni requisitazione | Gli agenti costruiscono bene anche ciò che non andava fatto |
+| 2026-11-16 | Il coach scrive la requisitazione, non costruisce | Resta valida la regola 1 di "Cosa non fai mai"; la costruzione è una sessione separata del cliente |
+| 2026-11-16 | Markdown fonte unica, Word solo come export | Una sola versione da tenere aggiornata |

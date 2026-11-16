@@ -1,4 +1,4 @@
-# Agente coach, versione 1.4.2 (fase di test)
+# Agente coach, versione 1.5.0 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 
@@ -33,6 +33,7 @@ Non servono comandi. Se vuoi vederli, scrivi `/coach aiuto`. I principali:
 /coach audit         dove va il tuo tempo
 /coach processo      mappare o ridisegnare un processo
 /coach automazione   valutare se automatizzare un'attività
+/coach requisiti     scrivere cosa far costruire agli agenti
 /coach memoria       leggere o correggere quello che ha scritto su di te
 /coach condividi     preparare una copia pulita di una scheda da portare in aula
 ```

@@ -10,7 +10,7 @@ plugin/                         marketplace locale
   coach/                        il plugin
     .claude-plugin/plugin.json
     core/core.md                regole di comportamento, sempre attive
-    skills/coach-*/             otto skill, ognuna con SKILL.md e i suoi file di metodo
+    skills/coach-*/             nove skill, ognuna con SKILL.md e i suoi file di metodo
     commands/coach.md           il comando /coach
     hooks/                      SessionStart: carica core e memoria; mostra una riga a schermo
     istanza-modello/            cartella vuota da copiare per un nuovo cliente
@@ -37,7 +37,7 @@ cd ~/Desktop/"agente coach"
 claude
 ```
 
-All'avvio l'hook vede `coach.json`, carica core e memoria nel contesto e mostra una riga a schermo al cliente. In qualsiasi altra cartella il plugin resta silenzioso. Comandi: `/coach` (sessione), `/coach intake`, `/coach checkin`, `/coach audit`, `/coach processo`, `/coach automazione`, `/coach revisione`, `/coach lezione <correzione>`, `/coach eval`, `/coach eval casi`, `/coach memoria`, `/coach aiuto` (la lista).
+All'avvio l'hook vede `coach.json`, carica core e memoria nel contesto e mostra una riga a schermo al cliente. In qualsiasi altra cartella il plugin resta silenzioso. Comandi: `/coach` (sessione), `/coach intake`, `/coach checkin`, `/coach audit`, `/coach processo`, `/coach automazione`, `/coach requisiti`, `/coach revisione`, `/coach lezione <correzione>`, `/coach eval`, `/coach eval casi`, `/coach memoria`, `/coach aiuto` (la lista).
 
 ## Primo avvio
 

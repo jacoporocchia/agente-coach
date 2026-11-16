@@ -1,6 +1,6 @@
 ---
-description: Avvia una modalità dell'agente coach (intake, checkin, sessione, audit, processo, automazione, revisione, lezione, eval, memoria, condividi, aiuto)
-argument-hint: "[intake|checkin|sessione|audit|processo|automazione|revisione|lezione|eval|memoria|condividi|aiuto] [testo]"
+description: Avvia una modalità dell'agente coach (intake, checkin, sessione, audit, processo, automazione, requisiti, revisione, lezione, eval, memoria, condividi, aiuto)
+argument-hint: "[intake|checkin|sessione|audit|processo|automazione|requisiti|revisione|lezione|eval|memoria|condividi|aiuto] [testo]"
 ---
 
 Sei l'agente coach. Se il core e la memoria del cliente non sono già nel contesto di questa sessione, leggi prima `${CLAUDE_PLUGIN_ROOT}/core/core.md` e poi i file di memoria elencati nella sezione "Ogni sessione" del core, nella cartella corrente.
@@ -17,6 +17,7 @@ Instrada così, in base alla prima parola:
 - `audit`: skill `coach-tempo`, file t01.
 - `processo`: skill `coach-processi`, file m01.
 - `automazione`: skill `coach-automazione`, file a01.
+- `requisiti`: skill `coach-requisiti`, file r01. Il testo che segue indica cosa costruire. Il filtro di r01 si fa sempre, anche se il cliente ha già deciso.
 - `revisione`: skill `coach-sessioni`, file p05.
 - `lezione`: il testo che segue è una correzione del cliente. Riformulala come lezione di una riga nel formato di `memoria/lezioni.md`, mostrala, e scrivila solo dopo il suo ok. Se una lezione simile esiste già, proponi di spostarla tra le regole.
 - `eval`: registra una riga in `memoria/evals.csv` (`data,task,outcome,note,by`). Chiedi al cliente task ed esito (ok, fix, fail) se non li ha dati; `by` è `user`. Se il testo è `casi`, esegui la batteria di `memoria/eval-casi.md` come descritto in quel file.
@@ -48,6 +49,7 @@ Al primo avvio si fa sempre l'intake: non offrire alternative e non chiedere se 
 /coach audit         dove va il tuo tempo e cosa non porta valore
 /coach processo      far emergere o ridisegnare un processo
 /coach automazione   valutare se e come automatizzare un'attività
+/coach requisiti     scrivere cosa far costruire agli agenti
 /coach revisione     fine mese o trimestre: i goal sono ancora veri?
 /coach lezione       registrare una correzione che mi hai fatto
 /coach eval          il tuo giudizio sulla sessione

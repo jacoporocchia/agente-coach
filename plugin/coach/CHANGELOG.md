@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.5.0 · 2026-11-16
+
+La requisitazione diventa l'output finale. Evidenza: richiesta del cliente prima del test ("generare la requisitazione sufficiente da passare a degli agenti per realizzare ciò che voglio") e schede esistenti con formati diversi tra loro. Minor: "Cosa non fai mai" invariato, istanze esistenti compatibili.
+
+- Core, "Chi sei": quando il cliente vuole far costruire qualcosa, il coach porta il lavoro fino a una requisitazione, sempre dopo il filtro su eliminare e semplificare. La scrive, non costruisce. Circa 40 parole in più, sotto il tetto.
+- Nuova skill `coach-requisiti` (nona): r01 filtro obbligatorio (se non lo fai, si può fare con meno, quale indicatore, serve o piace costruirlo; esiti procedi / semplifica / elimina, registrati anche quando chiudono); r02 requisitazione in sezioni da 0 a 13 più Consegna, con la tabella di cosa arriva da ogni scheda, versione rapida da 20 minuti e criteri per lo stato `da costruire`; r03 brief per gli agenti, verifica dei criteri di accettazione al ritorno, rimisura dell'indicatore.
+- Intestazione comune degli artefatti in m07: tipo, titolo, stato (bozza, confermata, da costruire, attiva, archiviata), versione, date, collegamenti. Applicata a scheda processo (m07), scheda automazione (a02), sintesi del time audit (t04). Ogni scheda dice quali sezioni della requisitazione alimenta. Le schede di sessione restano come sono: sono memoria, non artefatti.
+- a01 e a02 rimandano a r01 per i gradini 5-7. Nuova cartella `artefatti/requisiti/`.
+- m07, copia da condividere: il Markdown resta la fonte, il Word è un export su richiesta.
+- Nuovo comando `/coach requisiti`. CONTRACT: Cos'è, Output e Dipendenze aggiornati. LEGGIMI delle cartelle `artefatti/` riscritti.
+- Test: 9 skill, 41 file di metodo, sezioni di r02, intestazione comune, rimando nel core, comando `requisiti`.
+
 ## 1.4.2 · 2026-11-12
 
 - Percorso: il check-in settimanale resta anche nelle lezioni 5-11 (decisione del cliente). Per la consegna basta "fatta?", il tempo va su goal e impegni. Core invariato.

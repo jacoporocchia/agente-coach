@@ -33,7 +33,19 @@ E una quarta: **da proteggere**. "Quale attività di valore vorresti avesse più
 
 ## Template di sintesi
 
+Salva in `artefatti/time-audit/[nome].md`, con l'intestazione comune (`../coach-processi/m07-template-processo.md`).
+
 ```
+---
+tipo: time-audit
+titolo: [domanda dell'audit, in breve]
+stato: bozza
+versione: 0.1
+creata: AAAA-MM-GG
+aggiornata: AAAA-MM-GG
+collegata a: [goal G.., automazioni/...]
+---
+
 DOMANDA DELL'AUDIT: [...]
 PERIODO E METODO: [...]
 STIMA vs DATO: [attività]: stimato [x] h, misurato [y] h
@@ -42,3 +54,5 @@ COSA SORPRENDE: [...]
 DECISIONI: elimina [...] · delega [...] a [...] · automatizza [...] · ridisegna [...] · proteggi [...]
 RIMISURA: [data]
 ```
+
+Alimenta la requisitazione: sezione 1 (costo oggi, indicatore).

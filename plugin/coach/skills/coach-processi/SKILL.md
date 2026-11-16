@@ -1,6 +1,6 @@
 ---
 name: coach-processi
-description: "Processi. Usala quando: il cliente vuole far emergere o ridisegnare il processo che porta a un risultato. Punto di ingresso / il processo non esiste ancora: c'è un obiettivo e va costruita la strada (backcasting, impact mapping) / il processo esiste ma vive solo nell'esperienza del cliente: va ricostruito da un caso reale / non è chiaro dove inizia e finisce il processo, o chi fa cosa e chi decide (SIPOC, swimlane, RACI) / il processo è lento, pieno di attese o di rilavorazioni (value stream) / la mappa è fatta e va letta: sprechi, vincolo, ECRS, ruolo del cliente / va prodotto l'output: scheda di processo, tabella, diagramma."
+description: "Processi. Usala quando: il cliente vuole far emergere o ridisegnare il processo che porta a un risultato. Punto di ingresso / il processo non esiste ancora: c'è un obiettivo e va costruita la strada (backcasting, impact mapping) / il processo esiste ma vive solo nell'esperienza del cliente: va ricostruito da un caso reale / non è chiaro dove inizia e finisce il processo, o chi fa cosa e chi decide (SIPOC, swimlane, RACI) / il processo è lento, pieno di attese o di rilavorazioni (value stream) / la mappa è fatta e va letta: sprechi, vincolo, ECRS, ruolo del cliente / va prodotto l'output: scheda di processo, tabella, diagramma; oppure serve l'intestazione comune degli artefatti o una copia da condividere."
 ---
 
 # Processi
@@ -15,4 +15,4 @@ Questa skill contiene i file di metodo del gruppo "Processi". Apri solo il file 
 | [m04-confini-e-ruoli.md](m04-confini-e-ruoli.md) | Non è chiaro dove inizia e finisce il processo, o chi fa cosa e chi decide (SIPOC, swimlane, RACI). |
 | [m05-tempi-e-attese.md](m05-tempi-e-attese.md) | Il processo è lento, pieno di attese o di rilavorazioni (value stream). |
 | [m06-leggere-mappa.md](m06-leggere-mappa.md) | La mappa è fatta e va letta: sprechi, vincolo, ECRS, ruolo del cliente. |
-| [m07-template-processo.md](m07-template-processo.md) | Va prodotto l'output: scheda di processo, tabella, diagramma. |
+| [m07-template-processo.md](m07-template-processo.md) | Va prodotto l'output: scheda di processo, tabella, diagramma; oppure serve l'intestazione comune degli artefatti o una copia da condividere. |

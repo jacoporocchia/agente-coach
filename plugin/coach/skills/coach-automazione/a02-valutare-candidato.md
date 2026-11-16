@@ -46,7 +46,19 @@ Correzioni: sottrarre la manutenzione; accorciare l'orizzonte se il processo cam
 
 ## Scheda (salva in `artefatti/automazioni/[nome].md`)
 
+Intestazione comune: `../coach-processi/m07-template-processo.md`. La scheda nasce `bozza` e diventa `confermata` quando il cliente dice che il gradino è quello giusto.
+
 ```
+---
+tipo: automazione
+titolo: [verbo + oggetto]
+stato: bozza
+versione: 0.1
+creata: AAAA-MM-GG
+aggiornata: AAAA-MM-GG
+collegata a: processi/[nome].md · time-audit/[...] · goal [G..]
+---
+
 ATTIVITÀ: [verbo + oggetto]
 ECRS: eliminabile? [..] accorpabile? [..] semplificabile? [..]
 VALORE: [n/mese] × [min] = [h/mese] · [h/anno] · pareggio 5 anni: [h] · uso del tempo liberato: [..]
@@ -58,3 +70,7 @@ CONTROLLO UMANO: nessuno / a campione / approvazione prima dell'azione
 CHI MANTIENE: [..]
 PROSSIMO PASSO: [..]
 ```
+
+## Poi
+
+Gradino 1-4: si fa, senza altri documenti (il prossimo passo diventa un impegno). Gradino 5-7 e scheda confermata: `../coach-requisiti/r01-filtro.md`, poi la requisitazione. La scheda alimenta le sezioni 2, 9, 10 e 12. Gradino 8: si annota perché resta a mano, e si chiude.

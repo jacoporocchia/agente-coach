@@ -40,6 +40,19 @@ _parole = len(_core.split())
 if _parole > 1300: err(f'core di {_parole} parole: il tetto è 1300. Sposta le procedure nelle skill prima di aggiungere')
 for _f, _h in [('skills/coach-sessioni/p01-intake.md', '## Versione breve'), ('skills/coach-processi/m01-mappare-processo.md', '## Mappa rapida'), ('skills/coach-automazione/a02-valutare-candidato.md', '## Scheda rapida')]:
     if _h not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: manca {_h}')
+# 1.5.0: output standard
+for _f in ['r01-filtro.md', 'r02-scrivere-requisiti.md', 'r03-consegna-agenti.md']:
+    if not (ROOT / 'skills/coach-requisiti' / _f).exists(): err(f'coach-requisiti: manca {_f}')
+_r02 = ROOT / 'skills/coach-requisiti/r02-scrivere-requisiti.md'
+if _r02.exists():
+    _t = _r02.read_text(encoding='utf-8')
+    for _s in ['## 0. Filtro', '## 6. Requisiti', '## 8. Eccezioni', '## 9. Controllo umano', '## 11. Criteri di accettazione', '## 13. Domande aperte', '## Consegna', 'tipo: requisiti']:
+        if _s not in _t: err(f'r02: manca {_s}')
+if 'coach-requisiti' not in _core: err('core: manca il rimando a coach-requisiti in Chi sei')
+if '## Intestazione comune degli artefatti' not in (ROOT / 'skills/coach-processi/m07-template-processo.md').read_text(encoding='utf-8'): err('m07: manca l intestazione comune')
+for _f, _tipo in [('skills/coach-processi/m07-template-processo.md', 'tipo: processo'), ('skills/coach-automazione/a02-valutare-candidato.md', 'tipo: automazione'), ('skills/coach-tempo/t04-leggere-audit.md', 'tipo: time-audit')]:
+    if _tipo not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: modello senza intestazione comune')
+if '`requisiti`' not in (ROOT / 'commands/coach.md').read_text(encoding='utf-8'): err('coach.md: manca il comando requisiti')
 # il documento di processo nel pacchetto deve essere la versione anonimizzata
 import zipfile as _zf
 if (PKG / 'processo-agente-coach.docx').exists():
@@ -54,7 +67,7 @@ for s in ['## Cosa non fai mai', '## Imparare dalle correzioni', '## Funzioni op
 
 # skill
 skills = sorted((ROOT / 'skills').iterdir())
-if len(skills) != 8: err(f'attese 8 skill, trovate {len(skills)}')
+if len(skills) != 9: err(f'attese 9 skill, trovate {len(skills)}')
 nfiles = 0
 for d in skills:
     sk = (d / 'SKILL.md').read_text()
@@ -71,7 +84,7 @@ for d in skills:
         if not t.split('\n')[2].startswith('**Usalo quando:**'): err(f'{f.name}: manca la riga Usalo quando')
         for ref in re.findall(r'`((?:\.\./coach-[a-z]+/)?[a-z]\d\d-[a-z0-9-]+\.md)`', t):
             if not (d / ref).resolve().exists(): err(f'{f.name}: rimando rotto {ref}')
-if nfiles != 38: err(f'attesi 38 file di metodo, trovati {nfiles}')
+if nfiles != 41: err(f'attesi 41 file di metodo, trovati {nfiles}')
 
 # niente dati personali nel metodo
 for f in list((ROOT / 'skills').rglob('*.md')) + [ROOT / 'core/core.md', ROOT / 'commands/coach.md'] + list((ROOT / 'istanza-modello').rglob('*.md')):
@@ -104,4 +117,4 @@ if len(sys.argv) > 1:
 
 if errors:
     print('ERRORI:'); [print(' -', e) for e in errors]; sys.exit(1)
-print(f'OK: 8 skill, {nfiles} file di metodo, manifest, hook, core e pacchetto verificati. Versione {ver}.')
+print(f'OK: {len(skills)} skill, {nfiles} file di metodo, manifest, hook, core e pacchetto verificati. Versione {ver}.')
