@@ -69,6 +69,7 @@ Prima del test, Max ha chiesto output standard: schede e requisitazione. Le sche
 - **Intestazione comune** (m07) per tutti gli artefatti: tipo, titolo, stato, versione, date, collegamenti. Lo stesso nome di file lega processo, automazione e requisiti della stessa attività.
 - **Nuovo goal (stessa mattina).** Max ha ridefinito il punto d'arrivo: "generare la requisitazione sufficiente da passare a degli agenti per realizzare ciò che voglio". La requisitazione diventa l'output finale e le altre schede la alimentano. Nuova skill `coach-requisiti`: filtro obbligatorio su eliminare e semplificare (r01, approvato da Max), requisitazione in sezioni 0-13 con brief per gli agenti (r02), consegna e verifica dei criteri di accettazione (r03). Comando `/coach requisiti`. Il core cambia solo in "Chi sei": il coach scrive, non costruisce.
 - Versione 1.5.0 (minor: "Cosa non fai mai" invariato).
+- **1.6.0 (17 novembre).** Max ha chiuso la domanda aperta: la requisitazione non è imposta. All'accordo il coach chiede se il cliente vuole arrivarci, altrimenti presenta le altre strade (chiarire, tempo, processi, automazione, sbloccare, solo parlarne).
 
 ## Prossimi passi
 
@@ -98,3 +99,4 @@ Prima del test, Max ha chiesto output standard: schede e requisitazione. Le sche
 | 2026-11-16 | Filtro obbligatorio su eliminare e semplificare prima di ogni requisitazione | Gli agenti costruiscono bene anche ciò che non andava fatto |
 | 2026-11-16 | Il coach scrive la requisitazione, non costruisce | Resta valida la regola 1 di "Cosa non fai mai"; la costruzione è una sessione separata del cliente |
 | 2026-11-16 | Markdown fonte unica, Word solo come export | Una sola versione da tenere aggiornata |
+| 2026-11-17 | Il coach chiede all'accordo se arrivare a una requisitazione, altrimenti presenta le altre strade | Il punto d'arrivo è del cliente; il metodo non spinge chi non costruisce a specificare |

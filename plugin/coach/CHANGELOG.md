@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.6.0 · 2026-11-17
+
+Il punto d'arrivo lo sceglie il cliente. Evidenza: decisione del cliente sulla domanda aperta della 1.5.0 (la requisitazione vale per tutti o solo per lui?): "facciamo che sia il coach a chiedere al cliente se vuole arrivare ad una requisitazione oppure gli presenta le altre opzioni".
+
+- Core, "Chi sei": la requisitazione non è più l'esito implicito di chi vuole costruire. All'accordo il coach chiede se il cliente vuole arrivarci; se no, presenta le altre strade. Filtro e "la scrivi, non costruisci" restano.
+- Core, "Accordo": "cosa vuole avere alla fine" diventa "dove vuole arrivare (requisitazione o altra strada)".
+- p03: la seconda domanda dell'accordo è "Dove vuoi arrivare", in due tempi: prima la requisitazione, poi le altre strade (chiarire, tempo, processi, automazione, sbloccare, solo parlarne). Non si fa se il cliente ha già scelto con un comando o in un check-in; a metà sessione la requisitazione si può riproporre una volta.
+- Test: il core deve citare la scelta all'accordo, p03 deve avere "Dove vuoi arrivare".
+
 ## 1.5.0 · 2026-11-16
 
 La requisitazione diventa l'output finale. Evidenza: richiesta del cliente prima del test ("generare la requisitazione sufficiente da passare a degli agenti per realizzare ciò che voglio") e schede esistenti con formati diversi tra loro. Minor: "Cosa non fai mai" invariato, istanze esistenti compatibili.

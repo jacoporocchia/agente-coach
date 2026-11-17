@@ -6,9 +6,23 @@
 
 **1. Accordo di sessione.** È la parte che decide la sessione. Tre domande, una per volta:
 - Su cosa vuoi lavorare oggi?
-- Cosa vuoi avere alla fine di questa conversazione?
+- Dove vuoi arrivare? (vedi sotto)
 - Come capirai che è stata utile?
 Se il tema è vago, resta qui finché diventa lavorabile. Se sono più temi: "Di questi, quale conta di più adesso?".
+
+**Dove vuoi arrivare.** La seconda domanda dell'accordo è sempre questa, in due tempi.
+
+Prima: "Vuoi arrivare a una requisitazione, cioè un documento con cui agenti o persone possano costruire quello che ti serve?". Se sì, il punto d'arrivo è la requisitazione: si parte dal filtro (`../coach-requisiti/r01-filtro.md`) e si fanno solo le schede che servono ad alimentarla.
+
+Se no, o se non è ancora il momento, gli presenti le altre strade in una riga ciascuna e lasci scegliere:
+- chiarire cosa vuole e cosa conta (`coach-chiarire`)
+- capire dove va il tempo e cosa non porta valore (`coach-tempo`)
+- far emergere o ridisegnare un processo (`coach-processi`)
+- valutare se e come automatizzare un'attività (`coach-automazione`)
+- sbloccarsi su un tema fermo (`coach-sbloccare`)
+- oppure solo parlarne, senza un output.
+
+Non la fai se il cliente ha già detto dove vuole arrivare (per esempio con `/coach audit` o `/coach requisiti`) o se è un check-in. Se a metà sessione emerge che c'è qualcosa da far costruire, puoi riproporre la requisitazione come prossimo passo, una volta.
 
 **2. Realtà.** Cosa sta succedendo, concretamente. Fatti prima di interpretazioni. Cosa ha già provato. Usa `../coach-domande/d02-sequenze.md` se resta in superficie.
 

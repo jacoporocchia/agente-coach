@@ -49,6 +49,8 @@ if _r02.exists():
     for _s in ['## 0. Filtro', '## 6. Requisiti', '## 8. Eccezioni', '## 9. Controllo umano', '## 11. Criteri di accettazione', '## 13. Domande aperte', '## Consegna', 'tipo: requisiti']:
         if _s not in _t: err(f'r02: manca {_s}')
 if 'coach-requisiti' not in _core: err('core: manca il rimando a coach-requisiti in Chi sei')
+if 'dove vuole arrivare' not in _core: err('core: l accordo non chiede dove vuole arrivare')
+if '**Dove vuoi arrivare.**' not in (ROOT / 'skills/coach-sessioni/p03-sessione-coaching.md').read_text(encoding='utf-8'): err('p03: manca Dove vuoi arrivare')
 if '## Intestazione comune degli artefatti' not in (ROOT / 'skills/coach-processi/m07-template-processo.md').read_text(encoding='utf-8'): err('m07: manca l intestazione comune')
 for _f, _tipo in [('skills/coach-processi/m07-template-processo.md', 'tipo: processo'), ('skills/coach-automazione/a02-valutare-candidato.md', 'tipo: automazione'), ('skills/coach-tempo/t04-leggere-audit.md', 'tipo: time-audit')]:
     if _tipo not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: modello senza intestazione comune')
