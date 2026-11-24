@@ -4,6 +4,8 @@ title: "Come abbiamo costruito l'agente coach"
 
 # Il punto di partenza
 
+> Documento storico sulla costruzione iniziale dell'agente (novembre 2026); non descrive tutte le release successive. Per lo stato corrente, consulta `plugin/coach/README.md` e `plugin/coach/CHANGELOG.md`.
+
 Il 9 novembre 2026 c'era una cartella vuota sul Desktop, `agente coach`, con dentro un'altra cartella vuota, `kb`. Il giorno dopo, nella stessa cartella, c'è un plugin installabile in Claude Code, con un contratto, una versione, un test che verifica che regga, e una memoria che appartiene a Max e a nessun altro.
 
 Questo documento racconta come ci siamo arrivati: in quale ordine abbiamo lavorato, cosa abbiamo deciso a ogni passo e perché. Non serve a ripercorrere il lavoro, serve a poterlo rifare. Se domani si costruisce un secondo agente, questo è il metodo.

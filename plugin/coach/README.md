@@ -2,6 +2,8 @@
 
 L'agente coach come plugin di Claude Code. Il metodo vive qui; i dati di ogni cliente vivono in una cartella istanza, marcata dal file `coach.json`.
 
+Il plugin è progettato per Claude Code. La compatibilità con Cowork non è stata verificata e va considerata sperimentale.
+
 ## Struttura
 
 ```
@@ -12,7 +14,7 @@ plugin/                         marketplace locale
     core/core.md                regole di comportamento, sempre attive
     skills/coach-*/             nove skill, ognuna con SKILL.md e i suoi file di metodo
     commands/coach.md           il comando /coach
-    hooks/                      SessionStart: carica core e memoria; mostra una riga a schermo
+    hooks/                      SessionStart: carica il core e indica i file di memoria da leggere
     istanza-modello/            cartella vuota da copiare per un nuovo cliente
     tests/check_structure.py    test di struttura
     CONTRACT.md  CHANGELOG.md
@@ -37,7 +39,7 @@ cd ~/Desktop/"agente coach"
 claude
 ```
 
-All'avvio l'hook vede `coach.json`, carica core e memoria nel contesto e mostra una riga a schermo al cliente. In qualsiasi altra cartella il plugin resta silenzioso. Comandi: `/coach` (sessione), `/coach intake`, `/coach checkin`, `/coach audit`, `/coach processo`, `/coach automazione`, `/coach requisiti`, `/coach revisione`, `/coach lezione <correzione>`, `/coach eval`, `/coach eval casi`, `/coach memoria`, `/coach aiuto` (la lista).
+All'avvio l'hook vede `coach.json`, carica il core e indica al modello i file di memoria da leggere; mostra inoltre un messaggio al cliente. In qualsiasi altra cartella il plugin resta silenzioso. Comandi: `/coach` (sessione), `/coach intake`, `/coach checkin`, `/coach audit`, `/coach processo`, `/coach automazione`, `/coach requisiti`, `/coach revisione`, `/coach lezione <correzione>`, `/coach eval`, `/coach eval casi`, `/coach memoria`, `/coach aiuto` (la lista).
 
 ## Primo avvio
 
@@ -51,7 +53,7 @@ Dopo una modifica al plugin, sempre: aggiorna la versione in `plugin.json`, in `
 
 ## Un nuovo cliente
 
-Gli installer in `pacchetto/` fanno tutto: copiano il plugin in `~/.agente-coach/plugin`, creano la cartella "il mio coach" sul Desktop da `istanza-modello/` e il launcher. A mano: copia `istanza-modello/` in una nuova cartella, compila `cliente` e `creata` in `coach.json`, apri Claude Code lì e lancia `/coach`.
+Gli installer in `pacchetto/` fanno tutto: copiano il plugin in `~/.agente-coach/plugin`, creano la cartella "il mio coach" sul Desktop da `istanza-modello/` e il launcher. Questo pacchetto copia anche il calendario del Percorso AI per Talent in `memoria/percorso.md`; rimuovi quel file se non è pertinente. A mano: copia `istanza-modello/` in una nuova cartella, compila `cliente` e `creata` in `coach.json`, apri Claude Code lì e lancia `/coach`.
 
 ## Test
 
@@ -59,8 +61,8 @@ Gli installer in `pacchetto/` fanno tutto: copiano il plugin in `~/.agente-coach
 python3 coach/tests/check_structure.py
 ```
 
-Verifica che manifest e hook siano validi, che ogni skill abbia nome e descrizione, che ogni file citato esista, che nel metodo non compaiano dati di una persona specifica e che il core contenga la sezione "Cosa non fai mai".
+Verifica la struttura: manifest e hook, nome e descrizione delle skill, riferimenti ai file, assenza di dati personali nel metodo e presenza della sezione "Cosa non fai mai". Non valuta la qualità delle risposte del modello né certifica l'integrazione con Claude Code, Cowork o gli installer sui diversi sistemi operativi.
 
 ## Cowork
 
-Il formato del plugin è lo stesso. Se l'hook di avvio non viene eseguito, `/coach` legge da sé core e memoria, quindi l'agente funziona comunque.
+La compatibilità non è stata verificata. Il fatto che `/coach` possa leggere core e memoria senza l'hook non basta a garantire il funzionamento del plugin in Cowork.

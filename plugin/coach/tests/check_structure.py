@@ -118,6 +118,7 @@ with tempfile.TemporaryDirectory() as tmp:
     try:
         msg = json.loads(out.stdout)['systemMessage']
         if 'prima conversazione' not in msg: err('session-message: presentazione del primo incontro attesa con intake vuoto')
+        if 'file che legge vengono inviati al servizio' not in msg: err('session-message: manca l avviso sull elaborazione remota')
     except Exception as e: err(f'session-message: output non JSON: {e}')
     cj = inst / 'coach.json'; cj.write_text(cj.read_text().replace('"intake": ""', '"intake": "2026-01-01"'))
     out = subprocess.run(['bash', str(ROOT / 'hooks/session-message.sh')], env=dict(env, CLAUDE_PROJECT_DIR=str(inst)), capture_output=True, text=True)

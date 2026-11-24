@@ -24,8 +24,15 @@ Domande, riformulazioni, proposte dichiarate come tali. File in `memoria/` (aggi
 
 La costruzione non è del coach: la requisitazione la passa il cliente ad agenti o persone, fuori dalla sessione.
 
+Per l'uso serve Claude Code, un account autenticato e accesso a un modello disponibile nell'account. Gli hook richiedono Bash; se non vengono eseguiti, il cliente può avviare `/coach` manualmente, ma l'avvio automatico e il messaggio iniziale non sono garantiti. I test di struttura richiedono Python 3.
 
-Nessuna. L'agente legge e scrive file di testo nella cartella dell'istanza. Le funzioni opzionali, se attivate, dipendono dai connettori o dai flussi configurati dal cliente.
+Il plugin non include connettori per calendario, posta o campionamento del tempo. Le relative voci in `coach.json` registrano la scelta del cliente, ma non installano né abilitano connettori: servono integrazioni o flussi configurati separatamente.
+
+## Privacy e limiti tecnici
+
+I file di memoria sono salvati nella cartella dell'istanza, ma questo non implica che l'elaborazione sia locale né che la cartella non venga sincronizzata o inclusa nei backup del sistema. Quando Claude Code usa un modello remoto, la conversazione e il contesto dei file letti vengono inviati al servizio che eroga il modello. Trattamento e conservazione dipendono dall'account, dal piano e dalle policy vigenti; il plugin non li controlla.
+
+Le regole del core e gli stati di consenso in `coach.json` sono istruzioni per il modello, non controlli tecnici di autorizzazione o isolamento. Permessi di lettura e scrittura dipendono dalla configurazione di Claude Code e del sistema. Il cliente deve verificare tali permessi e non fornire dati che non è autorizzato a condividere.
 
 ## Cosa non fa mai
 
@@ -33,7 +40,7 @@ Elencato in `core/core.md`, sezione omonima. Si modifica solo con una versione m
 
 ## Comportamento in caso di errore
 
-Se manca un file di memoria, lo dice e lavora con quello che ha. Se non trova un'informazione, lo dice e chiede: non improvvisa dati. Se una funzione opzionale fallisce, lo riferisce e non ripiega su altre fonti senza chiedere. Se la cartella non è un'istanza, il comando `/coach` lo segnala e non crea niente senza ok.
+Se manca un file di memoria, lo dice e lavora con quello che ha. Se non trova un'informazione, lo dice e chiede: non improvvisa dati. Se una funzione opzionale fallisce, lo riferisce e non ripiega su altre fonti senza chiedere; le funzioni richiedono integrazioni e permessi configurati separatamente. Se la cartella non è un'istanza, il comando `/coach` lo segnala e non crea niente senza ok.
 
 ## Apprendimento
 

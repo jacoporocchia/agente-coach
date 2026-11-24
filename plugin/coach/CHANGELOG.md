@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.7.1 · 2026-11-24
+
+Allineate le dichiarazioni su privacy, requisiti, integrazioni e compatibilità. Evidenza: revisione del progetto rispetto al comportamento effettivamente documentato.
+
+- README e messaggio iniziale distinguono l'archiviazione dei file (incluse possibili sincronizzazioni e backup) dall'elaborazione remota dei contenuti da parte del modello.
+- CONTRACT chiarisce i requisiti di Claude Code e Bash, l'assenza di connettori inclusi e la differenza tra istruzioni del modello e controlli tecnici.
+- Cowork è indicato come non verificato; il test di struttura dichiara esplicitamente cosa non valida.
+- Documentato che il pacchetto copia il calendario del Percorso AI per Talent e come rimuoverlo se non pertinente.
+- Aggiornati il documento di processo corrente e la nota sul carattere storico del documento di processo iniziale.
+
 ## 1.7.0 · 2026-11-24
 
 Linguaggio più chiaro per chi usa il coach e memoria dell'intake aggiornata durante la conversazione. Evidenza: feedback del cliente sul gergo, sulle domande iniziali e sul rischio di perdere contesto quando si usa `/clear`.

@@ -1,16 +1,18 @@
-# Agente coach, versione 1.7.0 (fase di test)
+# Agente coach, versione 1.7.1 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 
 In questo pacchetto:
 - `installa-mac.command` e `installa-windows.cmd`: gli installer.
 - `plugin/`: il plugin per Claude Code (metodo, skill, comando /coach, contratto).
-- `processo-agente-coach.docx`: come è stato costruito e perché.
+- `processo-agente-coach.docx`: racconto storico della costruzione iniziale; per lo stato attuale fai riferimento a `plugin/coach/README.md` e al changelog.
+
+Il pacchetto include il calendario del Percorso AI per Talent e lo copia nella memoria di ogni nuova istanza. Se non partecipi a quel percorso, elimina `memoria/percorso.md` dopo l'installazione.
 
 ## Prima di tutto
 
 Serve Claude Code installato e con l'accesso già fatto: https://code.claude.com/docs/en/setup
-Su Windows serve anche Git per Windows (di solito si installa insieme a Claude Code).
+Gli hook richiedono Bash. Su Windows serve Git per Windows (di solito si installa insieme a Claude Code); senza Git Bash l'avvio automatico non funziona e dovrai avviare `/coach` manualmente.
 
 ## Installazione
 
@@ -54,5 +56,7 @@ Per scegliere il modello di Claude con cui parte il coach, lancia l'installer da
 
 ## Privacy
 
-La tua memoria resta solo nella cartella "il mio coach" sul tuo computer, in file di testo che puoi leggere e correggere. Il plugin non contiene dati di nessuno. Il coach conosce il calendario del percorso (in `memoria/percorso.md`) e al check-in ti chiede della consegna della settimana, ma non riferisce niente a nessuno: in aula porti solo quello che scegli, e se vuoi portare una scheda `/coach condividi` te ne prepara una copia senza dati personali. Il coach non manda mail, non scrive sul calendario e non tocca sistemi condivisi senza un tuo ok esplicito per quella singola azione.
+I file della memoria sono salvati nella cartella "il mio coach", in file di testo che puoi leggere e correggere. La cartella potrebbe essere inclusa nelle sincronizzazioni o nei backup configurati sul computer. Inoltre, questo non significa che l'elaborazione sia locale: quando Claude Code usa un modello remoto, la conversazione e il contesto dei file che il modello legge vengono inviati al servizio che lo eroga. Trattamento e conservazione dipendono dal tuo account, dal piano e dalle policy vigenti; verifica queste condizioni prima di inserire informazioni riservate e non condividere dati che non sei autorizzato a caricare.
+
+Il pacchetto include il calendario del Percorso AI per Talent (`memoria/percorso.md`), che puoi eliminare se non è pertinente. Il coach non riferisce niente a nessuno: in aula porti solo quello che scegli, e se vuoi portare una scheda `/coach condividi` te ne prepara una copia senza dati personali. Il coach non manda mail, non scrive sul calendario e non tocca sistemi condivisi senza un tuo ok esplicito per quella singola azione. Queste regole sono istruzioni per il modello, non un sistema tecnico di isolamento: i permessi effettivi dipendono dalla configurazione di Claude Code e del tuo computer.
 Dettagli in `plugin/coach/README.md`, regole in `plugin/coach/CONTRACT.md`.

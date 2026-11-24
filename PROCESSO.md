@@ -1,6 +1,6 @@
 # Come stiamo costruendo l'agente coach
 
-Diario del processo: cosa abbiamo fatto, cosa abbiamo deciso e perché, cosa viene dopo. Si aggiorna a ogni passo. Ultimo aggiornamento: 10 novembre 2026.
+Diario del processo: cosa abbiamo fatto, cosa abbiamo deciso e perché, cosa viene dopo. Si aggiorna a ogni passo. Ultimo aggiornamento: 24 novembre 2026.
 
 ## L'obiettivo
 
@@ -71,12 +71,26 @@ Prima del test, Max ha chiesto output standard: schede e requisitazione. Le sche
 - Versione 1.5.0 (minor: "Cosa non fai mai" invariato).
 - **1.6.0 (17 novembre).** Max ha chiuso la domanda aperta: la requisitazione non è imposta. All'accordo il coach chiede se il cliente vuole arrivarci, altrimenti presenta le altre strade (chiarire, tempo, processi, automazione, sbloccare, solo parlarne).
 
+### Fase 8. Allineamento delle dichiarazioni (24 novembre 2026)
+
+La revisione del progetto ha evidenziato tre disallineamenti: la privacy descriveva la memoria locale senza chiarire l'elaborazione tramite il modello; il contratto dichiarava assenti dipendenze runtime e non distingueva le istruzioni del modello dai controlli tecnici; alcuni documenti non riflettevano l'evoluzione del plugin.
+
+- Aggiornati le istruzioni per il cliente e il messaggio iniziale per distinguere archiviazione locale ed elaborazione remota.
+- Chiariti requisiti, limiti degli hook e assenza di connettori inclusi; Cowork è indicato come non verificato.
+- Esplicitato che il pacchetto installa il calendario del Percorso AI per Talent e come rimuoverlo se non pertinente.
+- Aggiornati test e versione a 1.7.1; i test di struttura non vengono presentati come validazione del comportamento del modello.
+- Separato il racconto storico della costruzione dalla documentazione dello stato corrente.
+
+## Stato corrente (24 novembre 2026)
+
+Plugin 1.7.1, nove skill e 41 file di metodo. Claude Code è l'ambiente di destinazione; Cowork non è verificato. Le integrazioni opzionali richiedono configurazione esterna. Il pacchetto include un calendario specifico del Percorso AI per Talent, mentre il plugin e il metodo sono riutilizzabili senza quel file.
+
 ## Prossimi passi
 
-1. Max installa il plugin in Claude Code (istruzioni in `plugin/coach/README.md`) e rilegge `memoria/come-lavoro.md`, che è la prima versione delle sue preferenze.
-2. Intake con `/coach intake` e due o tre sessioni reali.
-3. Batteria di prova con `/coach eval casi`, poi ripetuta una volta al mese o dopo ogni modifica del core.
-4. Le correzioni diventano lezioni. Il core si modifica solo quando una regola torna o un caso fallisce due volte, con nuova versione e changelog. Regola: correggere una regola esistente prima di aggiungerne una nuova.
+1. Verificare che il trattamento dei dati del proprio account Claude sia compatibile con le informazioni che si intende condividere.
+2. Provare il plugin in Claude Code con intake e due o tre sessioni reali; registrare gli esiti con `/coach eval`.
+3. Eseguire `/coach eval casi` e ripetere la batteria dopo modifiche al core; ricordare che la batteria è una valutazione del comportamento, distinta dal test di struttura.
+4. Correggere le discrepanze osservate prima di aggiungere regole o skill; ogni release aggiorna versione, changelog, installer e documentazione.
 
 ## Registro delle decisioni
 
