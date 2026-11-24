@@ -48,6 +48,6 @@ Le domande vanno adattate con le parole del cliente. Sono un repertorio, non un 
 - Se dici sì a questo, a cosa dici no?
 
 ## Chiusura
-- Cosa porti via da questa conversazione?
+- Cosa ti porti da oggi?
 - Cosa è stato più utile?
 - Cosa è cambiato rispetto a quando abbiamo iniziato?

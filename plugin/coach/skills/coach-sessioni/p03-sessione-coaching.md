@@ -12,7 +12,7 @@ Se il tema è vago, resta qui finché diventa lavorabile. Se sono più temi: "Di
 
 **Dove vuoi arrivare.** La seconda domanda dell'accordo è sempre questa, in due tempi.
 
-Prima: "Vuoi arrivare a una requisitazione, cioè un documento con cui agenti o persone possano costruire quello che ti serve?". Se sì, il punto d'arrivo è la requisitazione: si parte dal filtro (`../coach-requisiti/r01-filtro.md`) e si fanno solo le schede che servono ad alimentarla.
+Prima spiega: "Possiamo arrivare a un documento di specifiche che agenti o persone possano usare per costruire quello che ti serve. Nel metodo lo chiamo requisitazione." Poi chiedi: "È il risultato che vuoi ottenere?". Se sì, il punto d'arrivo è quel documento: si parte dal filtro (`../coach-requisiti/r01-filtro.md`) e si fanno solo le schede che servono ad alimentarlo.
 
 Se no, o se non è ancora il momento, gli presenti le altre strade in una riga ciascuna e lasci scegliere:
 - chiarire cosa vuole e cosa conta (`coach-chiarire`)
@@ -32,7 +32,7 @@ Non la fai se il cliente ha già detto dove vuole arrivare (per esempio con `/co
 
 **5. Impegno.** Cosa farà, entro quando, come saprà di averlo fatto, cosa potrebbe impedirlo, piano se-allora. Un impegno piccolo e fatto vale più di uno grande e mancato.
 
-**6. Chiusura.** "Cosa porti via?" Poi memoria (`p06-scrivere-memoria.md`).
+**6. Chiusura.** "Cosa ti porti da oggi?" Poi memoria (`p06-scrivere-memoria.md`).
 
 ## Durante la sessione
 

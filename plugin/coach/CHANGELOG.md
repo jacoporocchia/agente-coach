@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.7.0 · 2026-11-24
+
+Linguaggio più chiaro per chi usa il coach e memoria dell'intake aggiornata durante la conversazione. Evidenza: feedback del cliente sul gergo, sulle domande iniziali e sul rischio di perdere contesto quando si usa `/clear`.
+
+- `session-message.sh` spiega che il primo incontro serve a definire come lavorare insieme e descrive la memoria come appunti personali.
+- p01 usa formulazioni più concrete per gli obiettivi, la sfida, la ripetizione del ragionamento e il ritmo degli incontri; aggiorna la scheda dell'intake a ogni criterio confermato.
+- p02 e p03 sostituiscono formulazioni poco naturali e spiegano il documento di specifiche prima del termine interno "requisitazione".
+- p06 trasferisce i contenuti confermati nei file tematici alla chiusura dell'intake e mantiene un recap breve; le lezioni si scrivono solo dopo un sì esplicito.
+- Core, comando e banca delle domande usano "Cosa ti porti da oggi?".
+- README e pacchetto aggiornano le descrizioni rivolte al cliente.
+- Le scelte ancora aperte sulla frequenza con cui spiegare ogni termine e su eventuali hook per `/clear` restano non implementate.
+
 ## 1.6.0 · 2026-11-17
 
 Il punto d'arrivo lo sceglie il cliente. Evidenza: decisione del cliente sulla domanda aperta della 1.5.0 (la requisitazione vale per tutti o solo per lui?): "facciamo che sia il coach a chiedere al cliente se vuole arrivare ad una requisitazione oppure gli presenta le altre opzioni".

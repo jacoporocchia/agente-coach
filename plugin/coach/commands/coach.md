@@ -35,7 +35,7 @@ Prima guarda l'ultima scheda in `memoria/sessioni/`: se dice "Intake in corso", 
 
 Altrimenti il cliente non ha ancora iniziato l'intake. La presentazione (cosa sei, su cosa aiuti, cosa non fai, la memoria) gli è già comparsa a schermo all'avvio: non ripeterla. Il primo messaggio è tuo:
 
-1. Una riga: partiamo dall'intake, e se vuole vedere i comandi può digitare `/coach aiuto`.
+1. Una riga: "Partiamo con una prima conversazione per capire come lavoriamo insieme." Aggiungi che, se vuole vedere i comandi, può scrivere `/coach aiuto`.
 2. La prima domanda del punto 2 dell'intake (skill `coach-sessioni`, file p01).
 
 Al primo avvio si fa sempre l'intake: non offrire alternative e non chiedere se preferisce partire da un tema. Se il cliente porta comunque un tema, annotalo e riprendilo a intake concluso. Non elencare i comandi se non li chiede.
@@ -43,17 +43,17 @@ Al primo avvio si fa sempre l'intake: non offrire alternative e non chiedere se 
 ## Lista per `aiuto`
 
 ```
-/coach               sessione su un tema che porti tu
-/coach intake        prima sessione: chi sei, come lavoriamo, con che ritmo
-/coach checkin       check-in breve, verifica degli impegni aperti
-/coach audit         dove va il tuo tempo e cosa non porta valore
+/coach               conversazione su un tema che porti tu
+/coach intake        primo incontro: definiamo come lavoriamo insieme
+/coach checkin       punto breve sugli impegni presi
+/coach audit         capire dove va il tuo tempo e cosa non porta valore
 /coach processo      far emergere o ridisegnare un processo
 /coach automazione   valutare se e come automatizzare un'attività
-/coach requisiti     scrivere cosa far costruire agli agenti
-/coach revisione     fine mese o trimestre: i goal sono ancora veri?
+/coach requisiti     scrivere le specifiche per ciò che vuoi far costruire
+/coach revisione     fine mese o trimestre: gli obiettivi sono ancora quelli giusti?
 /coach lezione       registrare una correzione che mi hai fatto
-/coach eval          il tuo giudizio sulla sessione
-/coach memoria       leggere o correggere quello che ho scritto su di te
+/coach eval          dare un giudizio sulla conversazione
+/coach memoria       leggere o correggere i miei appunti su di te
 /coach condividi     preparare una copia pulita di una scheda da portare ad altri
 /coach aiuto         questa lista
 ```

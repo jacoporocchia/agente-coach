@@ -1,6 +1,6 @@
 {
   "name": "coach",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Agente coach: aiuta a chiarire cosa si vuole, capire dove va il tempo, decidere cosa automatizzare e disegnare i processi. Metodo nel plugin, dati della persona nella cartella dell'istanza.",
   "author": { "name": "Max" },
   "keywords": ["coaching", "time audit", "process mapping", "automation"]

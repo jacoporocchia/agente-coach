@@ -1,4 +1,4 @@
-# Agente coach, versione 1.6.0 (fase di test)
+# Agente coach, versione 1.7.0 (fase di test)
 
 Un coach che gira dentro Claude Code, sul tuo computer. Ti aiuta a chiarire cosa vuoi, capire dove va il tuo tempo, decidere cosa automatizzare e disegnare i processi che ti portano dove vuoi. È un'AI, non un coach umano certificato: te lo dice anche lui.
 
@@ -23,18 +23,18 @@ Non si installa niente dentro Claude Code: il plugin viene caricato solo quando 
 
 ## Come si usa
 
-Doppio clic su "Avvia coach". Si apre una finestra di testo e compare la presentazione del coach e lui parte subito con il primo incontro di conoscenza (l'intake, 45-60 minuti, anche in due volte). Da lì in poi gli scrivi come scriveresti a una persona: racconti su cosa vuoi lavorare, lui fa domande, alla fine prendete un impegno e lui aggiorna la sua memoria mostrandoti cosa ha scritto.
+Doppio clic su "Avvia coach". Si apre una finestra di testo, compare la presentazione e parte una prima conversazione per definire come lavorare insieme (nel plugin si chiama intake; dura 45-60 minuti e si può fare in due volte). Da lì in poi gli scrivi come scriveresti a una persona: racconti su cosa vuoi lavorare, lui fa domande, alla fine prendete un impegno e aggiorna i suoi appunti mostrandoti cosa ha scritto.
 
 Non servono comandi. Se vuoi vederli, scrivi `/coach aiuto`. I principali:
 
 ```
 /coach               sessione su un tema che porti tu
-/coach checkin       check-in breve sugli impegni aperti
-/coach audit         dove va il tuo tempo
+/coach checkin       punto breve sugli impegni presi
+/coach audit         capire dove va il tuo tempo
 /coach processo      mappare o ridisegnare un processo
 /coach automazione   valutare se automatizzare un'attività
-/coach requisiti     scrivere cosa far costruire agli agenti
-/coach memoria       leggere o correggere quello che ha scritto su di te
+/coach requisiti     scrivere le specifiche per ciò che vuoi far costruire
+/coach memoria       leggere o correggere i suoi appunti su di te
 /coach condividi     preparare una copia pulita di una scheda da portare in aula
 ```
 

@@ -12,7 +12,7 @@ Il beneficio di un AI coach sul raggiungimento degli obiettivi emerge con l'uso 
 2. Per ogni impegno: fatto, parziale o non fatto.
    - Fatto: "Cosa ha reso possibile farlo?" Riconosci lo sforzo specifico, non il risultato in generale.
    - Parziale o non fatto: apri `p04-impegno-mancato.md`.
-3. "Sul goal [G], da 1 a 10 dove sei?" Poi: "Perché quel numero e non due in meno?" (fa emergere ciò che funziona). Mai "perché non di più?".
+3. "Sull'obiettivo [G], da 1 a 10 dove sei?" Poi: "Cosa ti ha portato a quel numero?" (fa emergere ciò che funziona). Mai "perché non di più?".
 4. "Qual è il prossimo passo per questa settimana?"
 5. Per l'impegno principale: "Quando succede cosa, lo farai?" (piano se-allora).
 6. "Come vuoi che te lo chieda la prossima volta?"

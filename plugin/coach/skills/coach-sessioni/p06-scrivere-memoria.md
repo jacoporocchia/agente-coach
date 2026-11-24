@@ -36,13 +36,21 @@ File kb usati: [...]
 
 **`profilo.md`**: solo se il cliente ha detto qualcosa di nuovo su di sé, sul ruolo o su come vuole lavorare.
 
+## Intake in corso e scheda della sessione
+
+Durante l'intake, mantieni una sola scheda per la data corrente in `sessioni/AAAA-MM-GG.md`. Dopo ogni criterio chiuso, aggiorna il blocco "Intake in corso": conserva solo informazioni confermate e indica quali criteri mancano. Se l'intake prosegue in un altro giorno, crea la scheda per quella data e riparti dalla precedente.
+
+Quando l'intake si chiude, trasferisci i contenuti confermati nei file tematici (`profilo.md`, `come-lavoro.md`, `goal.md`, `impegni.md`). Chiedi un sì esplicito per confermare profilo e preferenze di lavoro. Le informazioni non confermate non entrano nei file tematici; se serve conservarle per discuterne, segnala che sono da confermare. Riduci la scheda della sessione a un recap di 5-8 righe.
+
+All'avvio, leggi i file tematici e le ultime due schede di sessione, senza ripercorrere tutto lo storico.
+
 ## Regole
 
 Fatti e ipotesi separati. Niente valutazioni su terze persone. Niente trascrizioni. Mostra al cliente cosa hai scritto in due o tre righe ("Ho segnato l'impegno X per giovedì e annotato Y. Va bene?").
 
 ## Lezioni (`lezioni.md`)
 
-Quando il cliente ti corregge (sul tono, su una domanda, su un'assunzione, su come hai usato uno strumento), proponi una lezione di una riga nel formato del file: cosa hai sbagliato, la regola da seguire, l'ambito. La scrivi solo dopo il suo ok. Se una correzione torna una seconda volta, proponi di spostarla tra le regole nello stesso file.
+Quando il cliente ti corregge (sul tono, su una domanda, su un'assunzione, su come hai usato uno strumento), proponi una lezione di una riga nel formato del file: cosa hai sbagliato, la regola da seguire, l'ambito. Spiega che `lezioni.md` raccoglie le correzioni che vuoi ricordare e chiedi un sì esplicito prima di scriverla. Se una correzione torna una seconda volta, proponi di spostarla tra le regole nello stesso file.
 
 ## Valutazioni (`evals.csv`)
 

@@ -12,7 +12,7 @@
 
 **2. Renderlo misurabile.** "Come saprai che ci sei arrivato?" Se la risposta è ancora vaga: "Cosa potresti contare o osservare?".
 
-**3. Dargli un tempo.** "Entro quando?" Separa il goal distale (12 mesi) dal prossimale (4-6 settimane): "E nelle prossime sei settimane, cosa dovrebbe essere diverso?".
+**3. Dargli un tempo.** "Entro quando?" Distingui l'obiettivo a 12 mesi dal risultato da raggiungere nelle prossime 4-6 settimane: "E nelle prossime sei settimane, cosa dovrebbe essere diverso?".
 
 **4. Verificare che sia suo.** "Questo lo vuoi tu, o pensi di doverlo volere?" Un obiettivo preso in prestito non genera energia e salta al primo ostacolo.
 
@@ -27,4 +27,4 @@
 
 ## Output
 
-Un goal nel formato: **cosa** (osservabile) · **indicatore** · **entro quando** · **perché conta** (in una frase del cliente). Va in `memoria/goal.md`.
+Un obiettivo nel formato: **cosa** (osservabile) · **come misurarlo** · **entro quando** · **perché conta** (in una frase del cliente). Va in `memoria/goal.md`.

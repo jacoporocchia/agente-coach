@@ -51,6 +51,16 @@ if _r02.exists():
 if 'coach-requisiti' not in _core: err('core: manca il rimando a coach-requisiti in Chi sei')
 if 'dove vuole arrivare' not in _core: err('core: l accordo non chiede dove vuole arrivare')
 if '**Dove vuoi arrivare.**' not in (ROOT / 'skills/coach-sessioni/p03-sessione-coaching.md').read_text(encoding='utf-8'): err('p03: manca Dove vuoi arrivare')
+_p01 = (ROOT / 'skills/coach-sessioni/p01-intake.md').read_text(encoding='utf-8')
+for _phrase in ['che cosa dovrebbe essere diverso nel tuo lavoro', 'Quanto vuoi che ti sfidi', 'Intake in corso', 'Dopo ogni criterio chiuso']:
+    if _phrase not in _p01: err(f'p01: manca {_phrase}')
+_p02 = (ROOT / 'skills/coach-sessioni/p02-check-in.md').read_text(encoding='utf-8')
+if 'Cosa ti ha portato a quel numero?' not in _p02: err('p02: manca la domanda aggiornata sul punteggio')
+if 'Perché quel numero e non due in meno?' in _p02: err('p02: contiene ancora la domanda precedente sul punteggio')
+_p03 = (ROOT / 'skills/coach-sessioni/p03-sessione-coaching.md').read_text(encoding='utf-8')
+if 'documento di specifiche' not in _p03 or 'Cosa ti porti da oggi?' not in _p03: err('p03: manca la spiegazione della requisitazione o la chiusura aggiornata')
+_p06 = (ROOT / 'skills/coach-sessioni/p06-scrivere-memoria.md').read_text(encoding='utf-8')
+if '5-8 righe' not in _p06: err('p06: manca il recap breve della sessione')
 if '## Intestazione comune degli artefatti' not in (ROOT / 'skills/coach-processi/m07-template-processo.md').read_text(encoding='utf-8'): err('m07: manca l intestazione comune')
 for _f, _tipo in [('skills/coach-processi/m07-template-processo.md', 'tipo: processo'), ('skills/coach-automazione/a02-valutare-candidato.md', 'tipo: automazione'), ('skills/coach-tempo/t04-leggere-audit.md', 'tipo: time-audit')]:
     if _tipo not in (ROOT / _f).read_text(encoding='utf-8'): err(f'{_f}: modello senza intestazione comune')
@@ -107,11 +117,11 @@ with tempfile.TemporaryDirectory() as tmp:
     out = subprocess.run(['bash', str(ROOT / 'hooks/session-message.sh')], env=dict(env, CLAUDE_PROJECT_DIR=str(inst)), capture_output=True, text=True)
     try:
         msg = json.loads(out.stdout)['systemMessage']
-        if 'prima volta' not in msg: err('session-message: messaggio di primo avvio atteso con intake vuoto')
+        if 'prima conversazione' not in msg: err('session-message: presentazione del primo incontro attesa con intake vuoto')
     except Exception as e: err(f'session-message: output non JSON: {e}')
     cj = inst / 'coach.json'; cj.write_text(cj.read_text().replace('"intake": ""', '"intake": "2026-01-01"'))
     out = subprocess.run(['bash', str(ROOT / 'hooks/session-message.sh')], env=dict(env, CLAUDE_PROJECT_DIR=str(inst)), capture_output=True, text=True)
-    if 'prima volta' in out.stdout: err('session-message: messaggio di primo avvio anche con intake fatto')
+    if 'prima conversazione' in out.stdout: err('session-message: presentazione del primo incontro anche con intake fatto')
 
 if len(sys.argv) > 1:
     out = subprocess.run(['bash', str(ROOT / 'hooks/session-start.sh')], env=dict(env, CLAUDE_PROJECT_DIR=sys.argv[1]), capture_output=True, text=True)
